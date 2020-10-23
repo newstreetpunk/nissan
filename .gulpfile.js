@@ -25,6 +25,7 @@ const { src, dest, parallel, series, watch, task } = require('gulp'),
 	connect        = require('gulp-connect-php'),
 	header         = require('gulp-header'),
 	notify         = require('gulp-notify'),
+	sourcemaps     = require('gulp-sourcemaps'),
 	rename         = require('gulp-rename'),
 	responsive     = require('gulp-responsive'),
 	pngquant       = require('imagemin-pngquant'),
@@ -104,10 +105,14 @@ function promo_nissan_browsersync() {
 // Styles
 function promo_nissan_styles() {
 	return src(projects.promo_nissan.styles.src)
+	.pipe(sourcemaps.init())
 	.pipe(eval(preprocessor)({ outputStyle: 'expanded' }).on("error", notify.onError()))
 	.pipe(concat(projects.promo_nissan.styles.output))
+	// .pipe(sourcemaps.write({includeContent: false}))
+	// .pipe(sourcemaps.init({loadMaps: true}))
 	.pipe(autoprefixer({ grid: true, overrideBrowserslist: ['last 10 versions'] }))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
+	.pipe(sourcemaps.write())
 	.pipe(dest(projects.promo_nissan.styles.dest))
 	.pipe(browserSync.stream())
 

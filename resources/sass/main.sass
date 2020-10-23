@@ -6,12 +6,12 @@
 	color: #666
 
 ::selection
-	background-color: $accent
+	background-color: $red
 	color: #fff
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: red
+	color: $red
 body input:required:valid,
 body textarea:required:valid
 	color: green
@@ -19,11 +19,11 @@ body textarea:required:valid
 body
   font-family: $default-font
   font-size: 14px
-  color: $text
+  color: $blue
   position: relative
   margin: 0px
   padding: 0px
-  font-weight: 500
+  font-weight: 400
   overflow-x: hidden
   background: url(../img/nissan-lending-main-autumn.jpg) 50% 62px no-repeat
 
@@ -553,14 +553,14 @@ form .form-group
 
 .btn
   font-family: $default-font
-  background: #002e42
+  background: $blue
 
   // text-transform:uppercase;
   text-align: left
   height: 47px
   display: block
   font-size: 18px
-  border: 1px solid #002e42
+  border: 1px solid $blue
   position: relative
   text-decoration: none
   text-transform: uppercase
@@ -601,7 +601,7 @@ form .form-group
     border-color: #9c0723
 
     // color: black;
-    border-color: #05425d
+    border-color: $bluehover
 
   &:before
     content: ''
@@ -611,7 +611,7 @@ form .form-group
     right: 0
     bottom: 0
     height: 100%
-    background: #05425d
+    background: $bluehover
     transform: translate3D(0, -100%, 0)
     transition: all .5s
     width: 110%
@@ -679,18 +679,15 @@ form .form-group
       &:after, &:before
 
 header
-  // box-shadow: 0px 0px 10px black
   background: rgba(255, 255, 255, 1)
-
-  // border-bottom: 1px solid #e5e5e5
   position: relative
   top: 0px
   left: 0px
   width: 100%
   z-index: 100
-
-  // background: url(../img/border.png) 50% 100% no-repeat;
+  padding: 6px 0
   position: fixed
+  box-shadow: 0 10px 100px rgba($blue, .3)
 
   .container
     display: flex
@@ -728,7 +725,7 @@ header
     a
       font-size: 18px
       text-decoration: none
-      color: #002e42
+      color: $blue
       text-transform: uppercase
 
       span
@@ -740,7 +737,7 @@ header
   padding-left: 11px
   font-size: 16px
   text-transform: uppercase
-  color: #002e42
+  color: $blue
 
 .worktime
   color: #878787
@@ -748,7 +745,7 @@ header
 
 .top_phone
   font-size: 24px
-  color: #002e42
+  color: $blue
   text-decoration: none
   white-space: nowrap
 
@@ -882,12 +879,12 @@ header .btn
 .title1_container
   padding-top: 11px
   margin-top: 62px
-  margin-bottom: 20px
+  margin-bottom: 30px
 
   .title1
     color: black
     border-left: 6px solid $red
-    font-size: 46px
+    font-size: 40px
     background: rgba(255, 255, 255, 0.7)
     text-transform: uppercase
     position: relative
@@ -982,7 +979,6 @@ header .btn
   justify-content: space-between
   align-items: center
   padding: 20px 0
-
   .title1
     font-size: 40px
     text-transform: uppercase
@@ -1029,7 +1025,7 @@ header .btn
       font-weight: 400
       color: white
       text-decoration: none
-      background: #a21039
+      background: $red
       display: block
       padding: 10px
       height: 100%
@@ -1195,14 +1191,15 @@ header .btn
       position: relative
 
     .btn.rassrochka
-      position: absolute
-      left: 0
-      bottom: 90px
-      width: 200px
+      // position: absolute
+      // left: 0
+      // bottom: 90px
+      width: 240px
       text-transform: none
       text-align: center
       padding-left: 0
       background: $red
+      margin-top: 50px
 
       &:before
         content: ''
@@ -1211,7 +1208,7 @@ header .btn
         left: -55%
         width: 100%
         height: 100%
-        background: #002e42
+        background: $blue
         transform: skewX(-24deg)
 
       &:hover:before
@@ -1251,7 +1248,7 @@ header .btn
 
       span
         font-size: 38px
-        color: #002e42
+        color: $blue
         padding-bottom: 15px
         display: block
 
@@ -1263,7 +1260,7 @@ header .btn
           animation: blurblack 2s ease-out
 
         font
-          color: #002e42
+          color: $blue
 
 @keyframes blurblack
   from
@@ -1316,17 +1313,18 @@ header .btn
 
   .props_price
     a
-      color: #002e42
+      color: $blue
       font-weight: bold
-      font-size: 30px
+      font-size: 28px
       text-decoration: none
       display: block
+      margin-bottom: 8px
 
     span
       color: $red
 
     .cred
-      font-size: 24px
+      font-size: 20px
 
   .props_items
     width: 100%
@@ -1362,7 +1360,7 @@ header .btn
   .props li a
     display: block
     position: relative
-    color: #002e42
+    color: $blue
     text-decoration: none
     font-family: $default-font
     font-size: 18px
@@ -1534,16 +1532,15 @@ header .btn
   top: 80px
   z-index: 1
   width: 27%
-  margin-bottom: 220px
+  margin-bottom: 145px
 
 .fam_text
-  color: #002e42
-  font-size: 30px
+  color: $blue
+  font-size: 20px
   font-family: $default-font
-  padding-bottom: 20px
+  padding-bottom: 25px
   text-align: center
   text-transform: uppercase
-  line-height: 130%
 
   span
     font-size: 48px
@@ -1581,7 +1578,7 @@ header .btn
     font-family: $default-font
     text-align: left
     color: black
-    font-size: 35px
+    font-size: 28px
     padding-bottom: 40px
     font-weight: 700
 
@@ -1589,7 +1586,7 @@ header .btn
     font-family: $default-font
     text-align: left
     color: black
-    font-size: 25px
+    font-size: 20px
     padding-bottom: 40px
     font-weight: 300
 
@@ -1657,7 +1654,7 @@ header .btn
   padding-top: 300px
 
   .form_title
-    font-size: 60px
+    font-size: 50px
     text-align: center
     line-height: 100%
     text-transform: uppercase
@@ -1686,7 +1683,7 @@ header .btn
 
   .comment
     font-family: $default-font
-    font-size: 28px
+    font-size: 24px
     color: white
     padding-bottom: 0px
     text-align: left
@@ -1835,7 +1832,7 @@ header .btn
     box-sizing: border-box
 
     a
-      color: #002e42
+      color: $blue
 
 .contacts
   position: absolute
@@ -1871,7 +1868,7 @@ header .btn
 
   .bottom_phone
     font-size: 30px
-    color: #002e42
+    color: $blue
     text-decoration: none
 
   .btn
@@ -2641,7 +2638,7 @@ footer .disclamer
     .form_title
       width: 100%
       font-size: 32px
-      color: #002e42
+      color: $blue
 
       span
 
@@ -2651,7 +2648,7 @@ footer .disclamer
       .column
 
     .comment
-      color: #002e42
+      color: $blue
       padding-bottom: 154px
 
     .form_comment span
@@ -2669,10 +2666,10 @@ footer .disclamer
       margin-top: 0px
 
     .agree_field
-      color: #002e42
+      color: $blue
 
       a
-        color: #002e42
+        color: $blue
 
   #form5
     width: 100%
@@ -2785,7 +2782,7 @@ footer .disclamer
     font-size: 20px
 
   #form2 .comment
-    color: #002e42
+    color: $blue
     padding-bottom: 143px
 
 @media (max-width: 375px)
