@@ -1,0 +1,3236 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+body
+  font-family: $default-font
+  font-size: 14px
+  color: $text
+  position: relative
+  margin: 0px
+  padding: 0px
+  font-weight: 500
+  overflow-x: hidden
+  background: url(../img/nissan-lending-main-autumn.jpg) 50% 62px no-repeat
+
+.bg_gray
+  background: #e8e8e8
+
+.compensate-for-scrollbar
+  margin-right: 0px !important
+  overflow: auto !important
+
+.row_toggle + .row_toggle_container, input[type=file]
+  display: none
+
+.uploader_container
+  height: 100%
+
+.uploader_field
+  cursor: pointer
+  display: inline-block
+  padding-left: 41px
+  height: 50px
+  border: 1px solid #376bea
+  border-radius: 100px
+  vertical-align: top
+  width: 100%
+  box-sizing: border-box
+
+  div
+    display: inline-block
+
+  &:before
+    content: ''
+    display: inline-block
+    width: 0px
+    height: 100%
+    vertical-align: middle
+
+  div
+    &.text_loading, &.uploader_images_count
+      display: none
+
+.resp_table
+  width: 100%
+
+  tr td:before
+    display: none
+
+  img
+    max-width: 100%
+
+.t_black
+  color: black !important
+
+sup
+  display: inline-block
+  vertical-align: top
+  top: -3px
+  position: relative
+
+.p_t_0
+  padding-top: 0px !important
+
+.m_t_0
+  margin-top: 0px !important
+
+.m_b_0
+  margin-bottom: 0px !important
+
+img
+  border-style: none
+  vertical-align: middle
+  max-width: 100%
+
+select
+  &::-ms-expand
+    display: none
+    display: none
+
+  appearance: none
+  -moz-appearance: none
+
+  // Firefox
+  -webkit-appearance: none
+
+  // Safari and Chrome
+  background: url(../img/ico_select.png) 100% 50% no-repeat
+  font-family: $default-font
+  outline: none
+  width: 100%
+  height: 47px
+  border-radius: 0px
+  font-size: 14px
+  color: #acacac
+  padding-left: 25px
+  border: 1px solid #acacac
+
+.fancybox-default-skin
+
+.f_left
+  float: left !important
+
+.f_right
+  float: right !important
+
+.t_right
+  text-align: right !important
+
+.t_left
+  text-align: left !important
+
+a:hover
+  text-decoration: none
+
+.fancybox-type-image .fancybox-close
+  right: 9px
+
+.fancybox-close
+  background: url(../img/bg_close.png) 50% 50% no-repeat !important
+  color: black
+  width: 22px !important
+  height: 22px !important
+  top: -25px !important
+  right: -25px !important
+
+.container
+  margin: 0px auto
+  padding: 0px 15px
+  max-width: 1140px
+  position: relative
+
+@media (min-width: 576px)
+  .container
+    width: 540px
+    max-width: 100%
+
+@media (min-width: 768px)
+  .container
+    width: 720px
+    max-width: 100%
+
+@media (min-width: 992px)
+  .container
+    width: 960px
+    max-width: 100%
+
+@media (min-width: 1200px)
+  .container
+    width: 1140px
+    max-width: 100%
+
+.row
+  position: relative
+  float: none
+
+.ico_upload:before
+  content: ''
+  background: url(../img/icons.png) -47px 0px no-repeat
+  width: 15px
+  height: 17px
+  position: absolute
+  top: 50%
+  margin-top: -9px
+  left: 20px
+  opacity: 0.5
+
+.ico_fio:before
+  content: ''
+  background: url(../img/icons.png) -24px 0px no-repeat
+  width: 13px
+  height: 15px
+  position: absolute
+  top: 50%
+  margin-top: -7px
+  left: 20px
+  opacity: 0.5
+
+.ico_addr
+  position: relative
+
+  &:before
+    content: ''
+    background: url(../img/icons.png) 0px 0px no-repeat
+    width: 9px
+    height: 15px
+    position: absolute
+    top: 1px
+    left: 0px
+    display: inline-block
+
+.ico_vk:before
+  content: ''
+  background: url(../img/icons.png) -104px 0px no-repeat
+  width: 15px
+  height: 10px
+  position: relative
+  top: 0px
+  display: inline-block
+  margin-right: 7px
+
+.ico_inst:before
+  content: ''
+  background: url(../img/icons.png) -104px -10px no-repeat
+  width: 15px
+  height: 14px
+  position: relative
+  top: 0px
+  display: inline-block
+  margin-right: 7px
+
+.ico_fb:before
+  content: ''
+  background: url(../img/icons.png) -104px -24px no-repeat
+  width: 12px
+  height: 15px
+  position: relative
+  top: 0px
+  display: inline-block
+  margin-right: 7px
+
+.ico_phone:before
+  content: ''
+  background: url(../img/icons.png) -8px 0px no-repeat
+  width: 12px
+  height: 12px
+  position: relative
+  top: 0px
+  display: inline-block
+  margin-right: 11px
+
+.ico_email:before
+  content: ''
+  background: url(../img/icons.png) -99px 0px no-repeat
+  width: 13px
+  height: 11px
+  position: absolute
+  top: 19px
+  left: 20px
+
+.ico_gift:before
+  content: ''
+  background: url(../img/icons.png) -42px 0px no-repeat
+  width: 15px
+  height: 13px
+  position: absolute
+  top: 18px
+  left: 20px
+
+.ico_btn:after
+  content: ''
+  background: url(../img/icons.png) -66px 0px no-repeat
+  width: 9px
+  height: 14px
+  position: absolute
+  top: 18px
+  right: 7px
+  display: inline-block
+  margin-left: 10px
+  margin-right: 10px
+
+.ico_btn_double
+  &:before
+    content: ''
+    background: url(../img/icons.png) -66px 0px no-repeat
+    width: 9px
+    height: 14px
+    position: absolute
+    top: 26px
+    right: 19px
+
+  &:after
+    content: ''
+    background: url(../img/icons.png) -66px 0px no-repeat
+    width: 9px
+    height: 14px
+    position: absolute
+    top: 0px
+    right: 0px
+    display: inline-block
+    margin-left: 10px
+    margin-right: 12px
+
+.ico_select:before
+  content: ''
+  background: url(../img/icons.png) -99px 0px no-repeat
+  width: 8px
+  height: 5px
+  position: absolute
+  top: 21px
+  right: 10px
+
+.ico_metro
+  background: url(../img/ico_metro.jpg) 50% 50% no-repeat
+  width: 21px
+  height: 15px
+  vertical-align: top
+  display: inline-block
+
+form
+  .ico_phone:before
+    // content:'';
+    background: url(../img/icons.png) -11px 0px no-repeat
+    width: 13px
+    height: 13px
+    position: absolute
+    top: 50%
+    left: 20px
+    margin-right: 11px
+    margin-top: -6px
+    opacity: 0.5
+
+  .ico_price:before
+    content: ''
+    background: url(../img/icons.png) -107px 0px no-repeat
+    width: 11px
+    height: 11px
+    position: absolute
+    top: 16px
+    left: 20px
+    margin-right: 11px
+    opacity: 0.5
+
+input[type=text]
+  color: #686868
+
+.has-danger
+  input, select, textarea
+    border-width: 2px
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #eba5a3
+
+#form_popup, #form_popup2
+  display: none
+
+.popup_container
+  width: 420px
+  max-width: 100%
+  padding: 5px 29px
+  overflow: hidden
+  position: relative
+  box-sizing: border-box
+
+  // border: 2px solid black;
+
+  h2
+    font-size: 20px
+    font-weight: 700
+    text-transform: uppercase
+    padding: 0px
+    margin: 0px
+    padding-bottom: 26px
+    text-align: center
+    padding-top: 20px
+    color: black
+
+  .form_comment
+    text-align: center
+    font-size: 20px
+    color: #414141
+    padding-bottom: 15px
+
+    a
+      display: block
+      color: #414141
+      text-decoration: none
+
+  .close
+    position: absolute
+    right: 10px
+    top: 10px
+    width: 34px
+    height: 34px
+    -moz-transform: rotate(45deg)
+
+    // Aey Firefox
+    -ms-transform: rotate(45deg)
+
+    // Aey IE
+    -webkit-transform: rotate(45deg)
+
+    // Aey Safari, Chrome, iOS
+    -o-transform: rotate(45deg)
+
+    // Aey Opera
+    transform: rotate(45deg)
+    cursor: pointer
+
+    &:before
+      content: ''
+      position: absolute
+      left: 0px
+      top: 16px
+      width: 34px
+      height: 1px
+      display: block
+      background-color: #a8a8a8
+
+    &:after
+      content: ''
+      position: absolute
+      left: 16px
+      top: 0px
+      width: 1px
+      height: 34px
+      display: block
+      background-color: #a8a8a8
+
+  .form-group
+    input[type=text]
+      color: black
+      display: block
+      height: 60px
+      line-height: 56px
+      text-decoration: none
+      text-align: left
+
+      // text-transform: uppercase;
+      margin-bottom: 10px
+      width: 100%
+      box-sizing: border-box
+      outline: none
+      background: #f3f3f3
+
+    button
+      cursor: pointer
+      height: 60px
+
+      &:before, &:after
+        display: none
+
+.not_agree button
+  background-color: #686868 !important
+  cursor: auto !important
+  color: white !important
+
+.agree_field
+  font-size: 10px
+  line-height: 100%
+  position: relative
+  display: inline-block
+  padding-left: 20px
+  top: -9px
+
+  input
+    position: absolute
+    top: -2px
+    left: 0px
+    margin: -0px
+
+  span
+    padding-left: 25px
+    display: inline-block
+
+.popup_container .form-disclamer
+  color: #b8b8b8
+  font-size: 10px
+  padding-top: 10px
+  text-align: center
+
+form .form-group
+  margin-bottom: 12px
+  position: relative
+
+  input[type=text]
+    height: 47px
+    width: 100%
+    border: 1px solid #acacac
+    padding: 0px 0px
+    color: #7c7c7c
+    font-size: 14px
+    padding-left: 20px
+    box-sizing: border-box
+    outline: none
+    font-weight: 300
+    background: none
+    text-align: left
+    font-family: $default-font
+    border-radius: 0px
+
+  button
+    width: 100%
+    height: 63px
+    outline: none
+    cursor: pointer
+
+    // text-transform: uppercase;
+    font-size: 16px
+    font-family: $default-font
+
+    &:hover
+
+.form_title
+  font-size: 36px
+  text-transform: uppercase
+  padding: 0px
+  margin: 0px
+  text-align: center
+  padding-bottom: 47px
+
+  span
+    // display: block;
+    // white-space: nowrap;
+
+.flex
+  display: flex
+
+.columns2
+  display: flex
+  justify-content: space-between
+
+  .column
+    width: 49%
+    display: inline-block
+    flex-wrap: wrap
+    justify-content: center
+
+.columns2_small
+  display: flex
+  justify-content: space-between
+  width: 1000px
+  max-width: 100%
+  margin: 0px auto
+
+  .column
+    width: 49%
+    display: inline-block
+    flex-wrap: wrap
+    justify-content: center
+
+.btn
+  font-family: $default-font
+  background: #002e42
+
+  // text-transform:uppercase;
+  text-align: left
+  height: 47px
+  display: block
+  font-size: 18px
+  border: 1px solid #002e42
+  position: relative
+  text-decoration: none
+  text-transform: uppercase
+  border-radius: 0px
+  box-sizing: border-box
+  color: white
+  overflow: hidden
+  transition: 0.5s
+  position: relative
+  padding-left: 10px
+
+  &:after
+    content: ''
+    width: 0px
+    height: 100%
+    vertical-align: middle
+    display: inline-block
+
+  span
+    vertical-align: middle
+    display: inline-block
+    width: 97%
+    z-index: 1
+    position: relative
+
+  &.transparent
+    color: white
+    background: none
+    border: 2px solid white
+
+    // transition: 0s;
+
+  &.arrow span
+    background: url(../img/arrow.png) 100% 50% no-repeat
+
+  &:hover
+    // background: #d0d0d0;
+    border-color: #9c0723
+
+    // color: black;
+    border-color: #05425d
+
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    height: 100%
+    background: #05425d
+    transform: translate3D(0, -100%, 0)
+    transition: all .5s
+    width: 110%
+    transform-origin: 0 bottom
+    transform: translate3D(-50%, 0, 0) rotate(-50deg)
+
+  &:hover:before
+    transform: rotate(0deg)
+    transition: all .5s
+
+  &.red
+    background: #aa0936
+    color: white
+    border-color: #aa0936
+
+    &:hover
+      background: #aa0936
+      border-color: #aa0936
+      color: white
+
+    &:after
+
+    &:before
+      background: #92022a
+
+    &:hover
+      &:after, &:before
+
+  &.grey
+    background: transparent
+    color: #838282
+    border: 2px solid #838282
+
+    &:hover
+      background: #838282
+      color: white
+
+    &:after
+
+    &:before
+      background: #838282
+
+    &.arrow span
+      background: url(../img/arrow_grey.png) 100% 50% no-repeat
+
+    &:hover.arrow span
+      background: url(../img/arrow.png) 100% 50% no-repeat
+
+  &.gray
+    background: #dcdcdc
+    color: black
+    border-color: #dcdcdc
+
+    &:hover
+      // background: #aa0936;
+      // border-color: #aa0936;
+      // color: white;
+
+    &:after
+
+    &:before
+      background: #d0cccc
+
+    &:hover
+      &:after, &:before
+
+header
+  // box-shadow: 0px 0px 10px black
+  background: rgba(255, 255, 255, 1)
+
+  // border-bottom: 1px solid #e5e5e5
+  position: relative
+  top: 0px
+  left: 0px
+  width: 100%
+  z-index: 100
+
+  // background: url(../img/border.png) 50% 100% no-repeat;
+  position: fixed
+
+  .container
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    // height: 111px;
+
+.logo_container
+  width: 100%
+
+  // text-align: center;
+.logo1
+  max-width: 80px
+  width: 100%
+  height: auto
+.logo1.mob
+  display: none
+
+.logo2
+  max-width: 180px
+  width: 100%
+  height: auto
+.menu
+  margin: 0px
+  padding: 0px
+  list-style: none
+  display: flex
+  width: 180px
+  justify-content: center
+
+  li
+    margin-right: 10px
+
+    a
+      font-size: 18px
+      text-decoration: none
+      color: #002e42
+      text-transform: uppercase
+
+      span
+
+.addr_container
+
+.top_addr
+  position: relative
+  padding-left: 11px
+  font-size: 16px
+  text-transform: uppercase
+  color: #002e42
+
+.worktime
+  color: #878787
+  font-family: $default-font
+
+.top_phone
+  font-size: 24px
+  color: #002e42
+  text-decoration: none
+  white-space: nowrap
+
+header .btn
+  font-size: 12px
+  white-space: nowrap
+  height: 32px
+  width: 165px
+
+.distance_work_bg
+  background: #a21039
+  margin-top: 62px
+
+.distance_work
+  padding: 20px 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  .text_wrap
+    display: flex
+
+  .arrows
+    margin-top: 7px
+
+    img
+      margin-right: -4px
+
+      // opacity: 1;
+      animation: arrow1 2s ease-out infinite
+      -webkit-animation: arrow1 2s ease-out infinite
+
+      &:nth-child(2)
+        // opacity: 0.75;
+        animation: arrow2 2s ease-out infinite
+        -webkit-animation: arrow2 2s ease-out infinite
+
+      &:nth-child(3)
+        // opacity: 0.5;
+        animation: arrow3 2s ease-out infinite
+        -webkit-animation: arrow3 2s ease-out infinite
+
+      &:nth-child(4)
+        // opacity: 0.25;
+        animation: arrow4 2s ease-out infinite
+        -webkit-animation: arrow4 2s ease-out infinite
+
+  .text
+    color: white
+    font-size: 16px
+    font-weight: 400
+    text-transform: uppercase
+    padding: 0 20px 0 80px
+    position: relative
+
+    &:before
+      content: url(../img/distance_work.png)
+      position: absolute
+      top: 7px
+      left: 0
+
+  &:hover .text:before
+    content: url(../img/distance_work_hover.png)
+
+  .text span
+    font-size: 32px
+    font-weight: 700
+
+  a
+    width: 300px
+    height: 50px
+
+@keyframes arrow1
+  20%, 100%
+    opacity: 0.25
+
+  5%
+    opacity: 1
+
+  10%
+    opacity: 0.75
+
+  15%
+    opacity: 0.5
+
+@keyframes arrow2
+  20%, 100%
+    opacity: 0.5
+
+  5%
+    opacity: 0.25
+
+  10%
+    opacity: 1
+
+  15%
+    opacity: 0.75
+
+@keyframes arrow3
+  20%, 100%
+    opacity: 0.75
+
+  5%
+    opacity: 0.5
+
+  10%
+    opacity: 0.25
+
+  15%
+    opacity: 1
+
+@keyframes arrow4
+  20%, 100%
+    opacity: 1
+
+  5%
+    opacity: 0.75
+
+  10%
+    opacity: 0.5
+
+  15%
+    opacity: 0.25
+
+// .distance_work .text:after 
+//     content: url(../img/arrows.png)
+//     position: absolute
+//     top: 7px
+//     right: 0
+
+.title1_container
+  padding-top: 11px
+  margin-top: 62px
+  margin-bottom: 20px
+
+  .title1
+    color: black
+    border-left: 6px solid #aa0936
+    font-size: 46px
+    background: rgba(255, 255, 255, 0.7)
+    text-transform: uppercase
+    position: relative
+    line-height: 121%
+    padding-top: 14px
+    padding-left: 18px
+    padding-bottom: 12px
+    width: 550px
+    text-align: left
+    max-width: 100%
+    box-sizing: border-box
+    margin-top: 15px
+    display: block
+    position: relative
+
+    span
+      text-transform: none
+      color: #aa0936
+
+      b
+        color: #aa0936
+        font-weight: 500
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      background: url(../img/corner1.png) no-repeat
+      height: 100%
+      right: -94px
+      top: 0
+      width: 94px
+
+  .title2
+    position: absolute
+    top: 0px
+    right: 0
+
+    .title2_text
+      color: black
+      border-right: 6px solid #aa0936
+      font-size: 25px
+      background: rgba(255, 255, 255, 0.7)
+      text-transform: uppercase
+      position: relative
+      line-height: 121%
+      padding-top: 14px
+      padding-right: 18px
+      padding-bottom: 12px
+      text-align: right
+      max-width: 100%
+      box-sizing: border-box
+      margin-top: 25px
+
+      .strong
+        font-weight: 700
+
+      .red
+        font-family: $default-font
+        font-weight: 700
+        display: inline-block
+        color: #aa0936
+
+      .normal
+        font-family: $default-font
+        font-weight: 700
+        font-size: 18px
+
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        background: url(../img/corner2.png) no-repeat
+        height: 100%
+        top: 0
+        left: -56px
+        width: 56px
+
+  > .btn
+    height: 43px
+    width: 358px
+    text-align: left
+    margin-top: 25px
+    max-width: 100%
+
+.timer
+  background: #f6f6f6
+  margin-top: 0
+
+.timer_container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 20px 0
+
+  .title1
+    font-size: 40px
+    text-transform: uppercase
+
+.title1_container .title1
+  span
+    color: #0c3d52
+
+  b
+    color: #aa0936
+
+    i
+      font-style: normal
+
+      &.show
+        animation: blurblack 2s ease-out
+
+.advantages_title
+  font-size: 42px
+  text-transform: uppercase
+
+.advantages_container
+  padding-top: 195px
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  width: 100%
+
+.advantages
+  margin: 0px
+  padding: 0px
+  list-style: none
+  display: flex
+  justify-content: space-between
+  width: 62%
+  max-width: 100%
+
+  > li
+    width: 18.5%
+
+    a
+      font-family: $default-font
+      font-size: 14px
+      font-weight: 400
+      color: white
+      text-decoration: none
+      background: #a21039
+      display: block
+      padding: 10px
+      height: 100%
+      box-sizing: border-box
+
+      &:before
+        content: ''
+        background: url(../img/adv_ico0.png) 0px 0px no-repeat
+        width: 30px
+        height: 25px
+        display: block
+        margin-bottom: 10px
+        background-size: contain
+
+      &.ico1:before
+        background: url(../img/adv_ico1.png) 0px 0px no-repeat
+        background-size: contain
+
+      &.ico2:before
+        background: url(../img/adv_ico2.png) 0px 0px no-repeat
+        background-size: contain
+
+      &.ico3:before
+        background: url(../img/adv_ico3.png) 0px 0px no-repeat
+        background-size: contain
+
+      &.ico4:before
+        background: url(../img/adv_ico4.png) 0px 0px no-repeat
+        background-size: contain
+
+      span
+        display: block
+        border-left: 2px solid #14163c
+        padding-left: 5px
+
+      b
+        font-family: $default-font
+
+      strong
+        font-size: 18px
+
+      i
+        font-size: 18px
+        font-style: normal
+
+      &:hover
+        background: #92022a
+
+#form1
+  box-sizing: border-box
+  width: 36%
+  max-width: 100%
+  border-radius: 5px
+  position: relative
+  z-index: 1
+
+  .form_title
+    font-size: 30px
+    text-align: center
+    line-height: 100%
+    text-transform: uppercase
+    padding-bottom: 3px
+    text-align: left
+
+    span
+      font-size: 24px
+      display: block
+      padding-bottom: 12px
+      color: #aa0936
+      text-transform: none
+      line-height: 100%
+
+  .form_comment
+    padding-bottom: 20px
+    font-size: 16px
+    color: #424a5a
+    font-weight: 500
+
+    span
+      color: #1f3775
+      font-weight: 700
+
+  .form-group
+    margin-bottom: 15px
+
+  input[type=text]
+    background: #fff
+    height: 45px
+
+  select
+    border: 1px solid #e18400
+    color: #e18400
+    height: 50px
+
+  option
+
+  input[type=text]
+    &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &:-moz-placeholder
+      color: #7c7c7c
+
+  button
+    // background: #e18400;
+    // border-color: #e18400;
+    height: 45px
+
+  .agree_field
+    color: black
+    text-align: left
+    position: relative
+    margin-left: auto
+
+    // width: 300px;
+    display: inline-block
+    max-width: 100%
+    box-sizing: border-box
+
+    a
+      color: black
+
+.year_block
+  display: flex
+  text-decoration: none
+  position: relative
+
+.year_title
+  font-weight: 700
+  font-size: 52px
+  background: #a21039
+  height: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 35%
+  color: #fff
+  padding: 75px 0
+  text-align: center
+
+  span
+    font-size: 42px
+    text-transform: uppercase
+
+.cars_items
+  margin: 0px
+  padding: 0px
+  list-style: none
+  padding-bottom: 70px
+
+  > li
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    width: 100%
+    padding-top: 75px
+
+    &:first-child
+      background: none
+
+    .image_container
+      width: 70%
+      display: flex
+      flex-direction: column
+      position: relative
+
+    .btn.rassrochka
+      position: absolute
+      left: 0
+      bottom: 90px
+      width: 200px
+      text-transform: none
+      text-align: center
+      padding-left: 0
+      background: #aa0936
+
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        left: -55%
+        width: 100%
+        height: 100%
+        background: #002e42
+        transform: skewX(-24deg)
+
+      &:hover:before
+        left: 0
+        transform: skewX(0)
+
+      i
+        position: absolute
+        left: 10px
+        top: 10px
+        display: block
+        background: #ffffff
+        height: 25px
+        width: 2px
+
+    .image_container .image
+      position: absolute
+      left: 200px
+      top: -10px
+
+    &#sx4 .image_container .image
+      left: 230px
+
+    &#jimny .image_container .image
+      left: 250px
+
+    .image_container img
+      max-width: 100%
+
+    .car_title
+      font-size: 30px
+      color: #aa0936
+      font-weight: bold
+      line-height: 100%
+      position: relative
+      z-index: 1
+
+      span
+        font-size: 38px
+        color: #002e42
+        padding-bottom: 15px
+        display: block
+
+      b
+        color: #aa0936
+        font-size: 24px
+
+        &.show
+          animation: blurblack 2s ease-out
+
+        font
+          color: #002e42
+
+@keyframes blurblack
+  from
+    text-shadow: 0px 0px 8px #fff, 0px 0px 5px #DB577E, 0px 0px 10px #DB577E, 0px 0px 10px #DB577E, 0px 0px 10px #DB577E, 0px 0px 10px #DB577E, 0px 0px 10px #DB577E, 0px 0px 10px #DB577E, 0px 0px 20px #DB577E, 0px 0px 20px #DB577E
+
+.colors_title
+  font-family: $default-font
+  font-size: 14px
+  padding-bottom: 9px
+  padding-top: 200px
+
+.colors_items
+  position: relative
+  margin: 0px
+  padding: 0px
+  list-style: none
+  width: 100%
+  display: flex
+
+  li
+    display: block
+    margin-right: 2px
+    padding-bottom: 5px
+    vertical-align: middle
+
+    a
+      border: 1px solid #d0d0d0
+      width: 28px
+      height: 28px
+      display: inline-block
+      position: relative
+      display: block
+
+      span
+        position: absolute
+        top: 0px
+        left: 0px
+        height: 0px
+        width: 0px
+        border-bottom-style: solid
+        border-bottom-width: 29px
+        border-left: 29px solid transparent
+
+    &.current a, a:hover
+      border-color: #aa0936
+
+.cars_items > li
+  .props
+    width: 31%
+
+  .props_price
+    a
+      color: #002e42
+      font-weight: bold
+      font-size: 30px
+      text-decoration: none
+      display: block
+
+    span
+      color: #aa0936
+
+    .cred
+      font-size: 24px
+
+  .props_items
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    a
+      display: flex
+      align-items: center
+      color: #000000
+      text-decoration: none
+
+      span
+        display: block
+        font-size: 26px
+        color: #ffffff
+        width: 45px
+        height: 45px
+        background: #aa0936
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 0 4px
+
+      font
+        padding-left: 5px
+        font-size: 16px
+        font-weight: 300
+        font-family: $default-font
+        line-height: 95%
+
+  .props li a
+    display: block
+    position: relative
+    color: #002e42
+    text-decoration: none
+    font-family: $default-font
+    font-size: 18px
+    padding-left: 23px
+    padding-bottom: 6px
+    padding-top: 5px
+    padding-right: 9px
+    text-transform: uppercase
+
+    &:hover
+      background: #e8e8e8
+
+    &:before
+      content: ''
+      width: 20px
+      height: 20px
+      background: #aa0936
+      position: absolute
+      top: 16px
+      left: 0px
+      text-align: center
+
+      // color: white;
+      font-size: 24px
+      font-family: $default-font
+      background: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALBAMAAAC5XnFsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAALVBMVEUAAAAALkIALkIALkIALkIALkIALkIALkIALkIALkIALkIALkIALkIALkL///8ulnWyAAAADXRSTlMAd7sRIt0zmapV7syIerUk0wAAAAFiS0dEDm+9ME8AAAAHdElNRQfjCgsRGihZycdKAAAAT0lEQVQI12NgYGBUZgACFt2rCQwMzLVX715kYOC4e6n3rgIDw6y7e+6qAeX23poAVHe36O4dBgabu7dr7wK1pN5deikFqEP36gSQfnagEAChbBiGI/nqvQAAAABJRU5ErkJggg==') left top no-repeat
+      position: absolute
+
+    b
+      font-size: 24px
+
+    span font
+      font-size: 18px
+      font-family: $default-font
+      color: #aa0936
+      text-transform: none
+
+.font_bold
+  font-size: 18px
+  font-family: $default-font
+
+.cars_items > li .btns
+  width: 100%
+  display: flex
+  flex-direction: column
+  padding-bottom: 30px
+
+  .title
+    font-size: 24px
+    border-left: 5px solid #aa0936
+    padding-left: 10px
+    line-height: 100%
+    padding-top: 2px
+    margin-bottom: 24px
+
+  select
+    margin-bottom: 11px
+
+    option
+
+  .btn
+    margin-top: 10px
+
+    &.type1:hover, &.type2:hover
+
+    &.grey
+      background: transparent url(../img/compl_ico.png) 10px 50% no-repeat
+      padding-left: 45px
+
+      &:hover
+        background: transparent url(../img/compl_ico_a.png) 10px 50% no-repeat
+
+.btn.grey:hover:before
+  z-index: -1
+
+// .cars_items > li:last-child 
+//   margin-top: 70px
+
+.cars_wrapper
+  position: relative
+
+.gosprog
+  padding: 20px 0
+  background: #ebebeb
+  width: 100%
+  position: absolute
+  top: 444px
+
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  .btn_gos
+    &:before
+      content: ''
+      position: absolute
+      top: 13px
+      left: 15px
+      background: url(../img/ico_gos.png) 0px 0px no-repeat
+      width: 50px
+      height: 53px
+
+    position: relative
+    display: block
+    border-left: 6px solid #aa0936
+    background: #283e49
+    color: white
+    text-decoration: none
+    width: 35%
+    max-width: 100%
+    text-align: left
+    padding-top: 10px
+    padding-left: 89px
+    padding-bottom: 9px
+    box-sizing: border-box
+
+    span
+      font-size: 26px
+
+      span
+        font-size: 22px
+        font-family: $default-font
+        display: block
+
+  .text
+    font-size: 24px
+    font-weight: 700
+    text-transform: uppercase
+    color: #838282
+    width: 23%
+
+    b
+      font-size: 30px
+      color: #aa0936
+
+    span
+      color: #283e49
+
+  .gos_button
+    width: 30%
+    background: white
+    border: 2px solid #aa0936
+    color: #aa0936
+
+    &:hover
+      color: white
+
+    span
+      background: url(../img/arrow_red.png) 100% 50% no-repeat
+
+    &:hover span
+      background: url(../img/arrow.png) 100% 50% no-repeat
+
+.fam_car
+  position: relative
+  width: 100%
+
+  img
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 0
+
+.fam_content
+  padding: 55px 30px
+  background: #f4f3f3
+  position: relative
+  top: 80px
+  z-index: 1
+  width: 27%
+  margin-bottom: 220px
+
+.fam_text
+  color: #002e42
+  font-size: 30px
+  font-family: $default-font
+  padding-bottom: 20px
+  text-align: center
+  text-transform: uppercase
+  line-height: 130%
+
+  span
+    font-size: 48px
+    color: #aa182d
+    display: block
+    margin-top: 5px
+
+.fam_content .btn
+  text-align: center
+
+.list
+  margin-bottom: 50px
+
+  .title1
+    font-size: 40px
+    color: #002a41
+    text-transform: uppercase
+    font-weight: bold
+    font-family: $default-font
+    padding-top: 0px
+    margin-top: 0px
+    padding-bottom: 12px
+
+.test-drive
+  background: url(../img/nissan-lending-autumn-850x470.jpg) top right no-repeat
+  padding: 20px 0
+
+#form5
+  border-right: 6px solid #aa0936
+  background: rgba(235, 235, 235, 0.7)
+  padding: 40px 45px
+  width: 55%
+
+  .form_title
+    font-family: $default-font
+    text-align: left
+    color: black
+    font-size: 35px
+    padding-bottom: 40px
+    font-weight: 700
+
+  .comment
+    font-family: $default-font
+    text-align: left
+    color: black
+    font-size: 25px
+    padding-bottom: 40px
+    font-weight: 300
+
+  .form-group
+    width: 50%
+
+  button
+    height: 47px
+
+.dist_work
+  background: rgba(235, 235, 235, 0.7)
+  padding: 80px 0
+
+.dist_work_block
+  background: url(../img/dist_bg.png) center right no-repeat
+  background-size: 60%
+
+.dist_work
+  .title
+    font-family: $default-font
+    text-align: left
+    color: black
+    font-size: 35px
+    padding-bottom: 40px
+    font-weight: 700
+    text-transform: uppercase
+
+  .comment
+    font-family: $default-font
+    text-align: left
+    color: black
+    font-size: 25px
+    padding-bottom: 40px
+    font-weight: 300
+
+.dist_work_block .btn
+  width: 30%
+  background: white
+  border: 2px solid #aa0936
+  color: #aa0936
+
+  &:hover
+    color: white
+
+  span
+    background: url(../img/arrow_red.png) 100% 50% no-repeat
+
+  &:hover span
+    background: url(../img/arrow.png) 100% 50% no-repeat
+
+.banner
+  background: url(../img/nissan-lending-autumn-1920x502.jpg) 50% 0px no-repeat
+  height: 463px
+  padding-bottom: 39px
+
+#form2
+  box-sizing: border-box
+  max-width: 100%
+  max-width: 100%
+  border-radius: 5px
+  position: relative
+  z-index: 1
+  text-align: center
+  margin-right: 15px
+  padding-top: 300px
+
+  .form_title
+    font-size: 60px
+    text-align: center
+    line-height: 100%
+    text-transform: uppercase
+    padding-bottom: 0
+    text-align: left
+    color: white
+    width: 100%
+
+    span
+      font-size: 24px
+      display: block
+      padding-bottom: 12px
+      color: #aa0936
+      text-transform: none
+      line-height: 100%
+
+  .columns
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-end
+
+    .column
+
+  .comment
+    font-family: $default-font
+    font-size: 28px
+    color: white
+    padding-bottom: 0px
+    text-align: left
+
+    b
+      text-transform: uppercase
+      font-family: $default-font
+      font-size: 28px
+
+  .form_comment
+    padding-bottom: 20px
+    font-size: 16px
+    color: #424a5a
+    font-weight: 500
+
+    span
+      color: #1f3775
+      font-weight: 700
+
+  .form-group
+    width: 31%
+    margin-bottom: 0px
+
+  input[type=text]
+    background: white
+
+  select
+    border: 1px solid #e18400
+    color: #e18400
+    height: 50px
+
+  option
+
+  input[type=text]
+    &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &:-moz-placeholder
+      color: #7c7c7c
+
+  button
+    // background: #e18400;
+    // border-color: #e18400;
+    height: 47px
+    margin-top: 43px
+
+  .agree_field
+    color: white
+    text-align: left
+    position: relative
+    margin-left: auto
+    width: 100%
+    display: inline-block
+    max-width: 100%
+    box-sizing: border-box
+    display: block
+    top: 10px
+
+    a
+      color: white
+
+#form3
+  box-sizing: border-box
+  max-width: 100%
+
+  // flex: 1 0 auto;
+  // background: #fcfcfc;
+  max-width: 100%
+  border-radius: 5px
+  position: relative
+  z-index: 1
+
+  // box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center
+  flex: 1 0 auto
+  margin-right: 15px
+  padding-top: 58px
+  padding-bottom: 30px
+
+  .form_title
+    font-size: 48px
+    text-align: center
+    line-height: 100%
+    text-transform: uppercase
+    padding-bottom: 0px
+    text-align: left
+    width: 35%
+
+    span
+      display: block
+      padding-bottom: 12px
+      color: #aa0936
+      text-transform: none
+      line-height: 100%
+
+  .columns
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+
+    .column
+
+  .comment
+    font-size: 24px
+    color: white
+    padding-bottom: 13px
+    text-align: left
+
+  .form_comment
+    padding-bottom: 20px
+    font-size: 16px
+    color: #424a5a
+    font-weight: 500
+
+    span
+      color: #1f3775
+      font-weight: 700
+
+  .form-group
+    width: 31%
+
+  input[type=text]
+    background: white
+
+  select
+    border: 1px solid #e18400
+    color: #e18400
+    height: 50px
+
+  option
+
+  input[type=text]
+    &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &:-moz-placeholder
+      color: #7c7c7c
+
+  button
+    // background: #e18400;
+    // border-color: #e18400;
+    height: 47px
+
+  .agree_field
+    text-align: left
+    position: relative
+    margin-left: auto
+
+    // width: 300px;
+    display: inline-block
+    max-width: 100%
+    box-sizing: border-box
+
+    a
+      color: #002e42
+
+.contacts
+  position: absolute
+  z-index: 1
+  background: white
+  top: 33px
+  left: 0px
+  padding: 26px
+  width: 505px
+  max-width: 100%
+  box-sizing: border-box
+
+  .title2
+    font-size: 48px
+    text-transform: uppercase
+
+  .comment
+    font-size: 24px
+    text-transform: uppercase
+    padding-top: 7px
+    padding-bottom: 8px
+
+  .bottom_addr
+    font-size: 16px
+    color: #878787
+    font-family: $default-font
+
+  .bottom_worktime
+    color: #878787
+    font-family: $default-font
+    padding-top: 6px
+    padding-bottom: 15px
+
+  .bottom_phone
+    font-size: 30px
+    color: #002e42
+    text-decoration: none
+
+  .btn
+    position: absolute
+    bottom: 28px
+    right: 29px
+    width: 165px
+    height: 32px
+    font-family: $default-font
+    font-size: 12px
+
+footer
+  padding-top: 20px
+  padding-bottom: 20px
+  background: whtie
+
+.disclamer_switch
+  text-align: center
+  color: #7b7b7b
+  text-decoration: underline
+  font-size: 12px
+
+  // padding-bottom: 20px;
+  display: inline-block
+  text-decoration: underline
+
+.disclamer
+
+footer .disclamer
+  color: #b8b8b8
+  font-size: 10px
+  display: none
+  text-align: left
+
+#map1
+  height: 380px
+
+// 
+
+@media (max-width: 1700px)
+  #form5
+    width: 48%
+
+@media (max-width: 1500px)
+  #form5
+    width: 36%
+
+//IPAD PRO BEGIN
+@media (min-width: 768px) and (max-width: 1199px)
+  body
+    background: url(../img/bg1.jpg) 75% 60px no-repeat
+
+  .title1_container
+    padding-top: 11px
+    margin-top: 60px
+
+    //margin-bottom: 290px;
+
+    .title1
+      margin-top: 10px
+
+  .advantages_container
+    width: 100%
+    padding-top: 310px
+
+  .menu
+    display: none
+
+  .cars_items > li .image_container .vigoda
+    color: #aa0936
+    font-size: 20px
+    padding-bottom: 47px
+
+  .colors_items
+    flex-wrap: wrap
+
+  .timer_container .mtimer
+    width: 830px
+    transform: scale(0.9)
+    transform-origin: left top
+
+  .title1_container
+    .title1
+      font-size: 30px
+
+      span
+        font-size: 35px
+
+    .title_comment
+      font-size: 38px
+
+  .year_block img
+    max-width: 70%
+
+  .advantages > li a
+    font-family: $default-font
+    font-size: 14px
+
+    strong
+      font-size: 18px
+
+  .test-drive
+    background-position: 200% 0
+
+  #form5
+    width: 45%
+
+  .dist_work_block
+    background-size: 53%
+
+  .cars_items > li
+    .image_container
+      width: 65%
+
+      .image
+        top: 50px
+
+    &#sx4 .image_container .image
+      left: 175px
+      top: 25px
+
+      img
+        max-width: 85%
+
+    .props
+      width: 35%
+
+  .fam_text
+    font-size: 24px
+
+  .fam_car img
+    object-position: 115px 0
+
+//IPAD PRO BEGIN
+
+//IPAD BEGIN
+@media (min-width: 768px) and (max-width: 991px)
+  .cars_items > li .btn.rassrochka
+    position: relative
+    bottom: unset
+
+  header .container
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    // height: 111px;
+    padding: 5px 15px
+
+  .logo1
+    max-width: 80%
+
+  .logo2
+    max-width: 22%
+
+  header .btn
+    font-size: 12px
+    white-space: nowrap
+    height: 32px
+    width: 150px
+
+  .top_phone
+    font-size: 20px
+
+  .addr_container
+    max-width: 100px
+
+  .title1_container .title1
+    width: 63%
+
+// .title1_container .title1:after 
+//     display: none
+
+  .timer_container
+    // text-align: center;
+
+    .title1
+      font-size: 40px
+      text-transform: uppercase
+      width: 35%
+
+  .title1_container .title2 .title2_text
+    width: 333px
+    margin-top: 75px
+
+// .title1_container .title2 .title2_text:after
+//     display: none
+
+  .timer_container .mtimer
+    width: 453px
+    min-width: 100px
+    transform: scale(0.75)
+    transform-origin: left top
+    margin-left: 40px
+
+  .cars_items > li
+    flex-wrap: wrap
+
+    .image_container
+      width: 50%
+      padding-right: 0px
+      padding-bottom: 30px
+
+    .props
+      width: 41%
+
+    .btns
+      width: 100%
+      margin: 0 auto
+      min-height: auto
+
+  #form2 .form_title, #form3 .form_title
+    font-size: 36px
+
+  .cars_items > li
+    .image_container .image
+      left: 0
+      top: 185px
+
+    &:last-child
+      margin-top: 110px
+
+  .gosprog
+    padding: 20px 0
+    background: #ebebeb
+    width: 100%
+    position: absolute
+    top: 510px
+
+    .text
+      font-size: 24px
+      font-weight: 700
+      text-transform: uppercase
+      color: #838282
+      width: 27%
+
+  .timer_container .mtimer
+    width: 424px
+    min-width: 100px
+    transform: scale(0.75)
+    transform-origin: left top
+    margin-left: 40px
+
+  .advantages_container
+    flex-wrap: wrap
+    padding-top: 344px
+
+  .advantages
+    width: 100%
+
+    > li a
+      font-family: $default-font
+      font-size: 18px
+
+  #form1
+    width: 70%
+    margin: auto
+    margin-top: 30px
+
+  .title1_container
+    .title1
+      font-size: 26px
+
+      span
+        font-size: 30px
+
+    .title_comment
+      font-size: 34px
+
+  .year_block img
+    max-width: 65%
+
+  .year_title
+    padding: 15px 0
+
+  #form2 .comment
+    font-size: 24px
+
+  #form5
+    width: 55%
+
+    .form-group
+      width: 100%
+
+  .test-drive
+    background-position: 130px 0
+
+  .dist_work_block
+    background-size: 100%
+    background-position: 50% 40%
+
+  .dist_work .title
+    padding-bottom: 300px
+
+  .dist_work_block .btn
+    width: 58%
+
+  .banner
+    height: auto
+    background-size: 170%
+    background-position: 60% 0px
+
+  #form2
+    padding-top: 167px
+
+  .cars_items > li
+    .props_items
+      align-items: flex-start
+
+      a
+        width: 33%
+        flex-direction: column
+        align-items: center
+
+        font
+          text-align: center
+
+    &#sx4 .image_container .image
+      left: 35px
+      top: 170px
+
+  .colors_title
+    padding-top: 195px
+
+  .fam_text
+    font-size: 18px
+
+    span
+      font-size: 30px
+
+  .fam_content
+    top: 30px
+    margin-bottom: 110px
+
+  .fam_car img
+    object-position: 85px 0
+
+//IPAD END
+
+//MOBILE BEGIN
+@media (max-width: 767px)
+  .cars_items > li
+    &#jimny .image_container .image
+      position: relative
+      left: 0
+      top: 0
+      text-align: center
+
+    .props_price
+      a
+        font-size: 26px
+
+      .cred
+        font-size: 20px
+
+    .btn.rassrochka
+      position: relative
+      bottom: 0
+      margin-bottom: 5px
+
+  .fam_car
+    display: flex
+    flex-direction: column-reverse
+
+    img
+      position: relative
+
+  .fam_content
+    width: 100%
+    top: 0
+    box-sizing: border-box
+    padding: 30px
+    margin-bottom: 50px
+
+  .fam_text
+    font-size: 24px
+    line-height: 160%
+
+    span
+      margin-top: 15px
+
+  .cars_items > li
+    .car_title br:last-child
+      display: none
+
+    .image_container .image
+      position: relative
+      left: 0
+      top: 0
+      text-align: center
+
+    &#sx4 .image_container .image
+      position: relative
+      left: 0
+      top: 0
+      text-align: center
+
+      img
+        max-width: 80%
+
+    .car_title span
+      padding-bottom: 5px
+
+  .distance_work_bg
+    margin-top: 137px
+
+  .distance_work
+    padding: 20px 0
+    display: block
+
+    .text
+      font-size: 14px
+      width: 100%
+      padding: 0
+      padding-bottom: 20px
+
+      span
+        font-size: 20px
+
+      &:before, &:after
+        display: none
+
+    a
+      width: 100%
+      height: 44px
+
+    .arrows
+      display: none
+
+  .year_block
+    flex-direction: column-reverse
+
+  .year_title
+    width: 100%
+    padding: 30px 0
+
+  .fancybox-type-image
+    width: 100% !important
+    margin: 0px !important
+    left: 0px !important
+
+  .fancybox-close
+    right: 9px !important
+    top: 9px !important
+
+  .fancybox-inner
+    width: 100% !important
+    margin: 0px !important
+    padding: 0px !important
+
+  .fancybox-wrap
+    margin: 0px !important
+    width: 100% !important
+    left: 0px !important
+    top: 20px !important
+
+  .fancybox-type-image .fancybox-close
+    top: -8px !important
+
+  .simple_slider
+    .btn_left, .btn_right
+      display: none !important
+
+  .popup_container
+    width: 100%
+
+  body
+    background-position: 85% 175px
+    background-size: 170%
+
+  .resp_table tr
+    display: block
+    padding-bottom: 20px
+
+    th
+      display: none
+
+    td
+      width: 100%
+      display: block
+      box-sizing: border-box
+      padding: 5px 0px
+
+      &:before
+        display: inline-block
+        width: 43%
+        margin-right: 2%
+        font-weight: 700
+        vertical-align: top
+        display: none
+
+  .timer
+    margin-top: 30px
+
+  .timer_container
+    flex-direction: column
+    padding: 20px 0 0 0
+
+    .title1
+      font-size: 27px
+
+  .title1_container .title2
+    position: static
+    top: 0px
+    right: 0
+
+    .title2_text
+      color: black
+      border-left: 6px solid #aa0936
+      border-right: none
+      font-size: 25px
+      background: none
+      text-transform: uppercase
+      position: relative
+      line-height: 121%
+      padding-top: 14px
+      padding-left: 18px
+      padding-right: 0
+      padding-bottom: 12px
+      width: 430px
+      text-align: left
+      max-width: 100%
+      box-sizing: border-box
+      margin-top: 285px
+
+      &:after
+        display: none
+
+  .timer_container .mtimer
+    width: 600px
+    min-width: 600px
+    transform: scale(0.6)
+    transform-origin: top
+    margin-left: 0px
+    margin-top: 20px
+
+  .title1_container .title_comment
+    font-size: 30px
+
+  header .container
+    align-items: center
+    justify-content: space-between
+
+  .logo_container
+
+  .logo1
+    display: none
+
+    &.mob
+      display: block
+
+  header .container .anchor
+    order: 1
+
+  .logo2
+    max-width: 35%
+    order: 2
+
+  .menu
+    display: none
+
+    li a span
+
+  .addr_container
+    padding-top: 5px
+    display: inline-block
+    font-size: 12px
+    display: none
+
+  .top_addr
+    font-size: 12px
+    display: none
+
+  .worktime
+    display: none
+
+  .top_phone
+    display: block
+    font-size: 20px
+    order: 3
+
+  header .btn
+    margin-top: 5px
+    width: 100%
+    text-align: center
+    font-size: 16px
+    display: none
+
+  .title1_container
+    margin-top: 55px
+    margin-bottom: 0
+
+    .title1
+      font-size: 26px
+      margin-bottom: 10px
+      margin-top: 0
+
+      span
+        font-size: 18px
+        line-height: 100%
+
+      &:after
+
+    .btn
+      width: 100%
+
+    .title1
+      span b
+        font-size: 24px
+
+      &:after
+        display: none
+
+  .advantages_container
+    display: block
+    padding-top: 30px
+    margin-top: 20px
+    padding: 0
+    margin-bottom: 40px
+    width: 100%
+
+  .cars_items > li:last-child
+    margin-top: 50px
+
+  .gosprog
+    position: static
+    margin-bottom: 40px
+
+    .container
+      display: block
+
+    .btn_gos
+      width: 100%
+
+    .text, .gos_button
+      width: 100%
+      margin-top: 10px
+
+  #form1
+    // padding-bottom: 15px;
+    width: 100%
+
+    .columns
+      display: block
+
+    .form-group
+      width: 100%
+
+  .advantages
+    width: 100%
+    flex-wrap: wrap
+
+    > li
+      width: 48%
+      padding-bottom: 15px
+
+      a
+        &:before, &.ico1:before, &.ico2:before, &.ico3:before
+
+        span
+          font-size: 16px
+
+        strong
+          font-size: 24px
+
+        &:hover
+
+      &:first-child
+        margin-left: 0px
+
+  .cars_items > li
+    display: block
+    padding-bottom: 15px
+    padding-top: 15px
+
+    &:first-child
+
+    .image_container
+      width: 100%
+      padding: 0px
+
+    .title
+      font-size: 33px
+
+    .vigoda
+      padding-bottom: 0
+
+    .credit:before
+
+    .image
+      // position: relative;
+      top: 0px
+      right: auto
+      width: 100%
+
+      img
+
+  .colors_title
+    padding-top: 0px
+
+  .colors_items
+    flex-wrap: wrap
+
+    li
+      a span, &.current a
+
+  .cars_items > li
+    .props
+      margin: 0px
+      width: 100%
+
+      li
+        display: inline-block
+        width: 100%
+        float: left
+        vertical-align: top
+        margin-left: 0.5%
+
+        &:first-child
+          margin-left: 0px
+
+        a
+          padding-left: 0px
+          padding-right: 0px
+          padding: 0px
+
+          &:hover, &:before
+
+          span
+            padding-left: 20px
+            font-size: 14px
+
+            font
+
+      &:after
+        content: ''
+        clear: both
+        float: none
+        height: 0px
+        display: block
+
+    .btns
+      width: 100%
+      min-height: auto
+
+      .title, select option
+
+      .btn
+        margin-top: 5px
+
+        &.type1:hover, &.type2:hover
+
+  .list .title1
+    font-size: 28px
+    margin-bottom: 0px
+    padding-bottom: 0px
+
+  .banner
+    height: auto
+    background-size: 160%
+    background-position: 50% 141px
+
+  #form2
+    margin: 0px
+    padding-top: 30px
+
+    .form_title
+      width: 100%
+      font-size: 32px
+      color: #002e42
+
+      span
+
+    .columns
+      display: block
+
+      .column
+
+    .comment
+      color: #002e42
+      padding-bottom: 154px
+
+    .form_comment span
+
+    .form-group
+      width: 100%
+      margin-bottom: 10px
+
+    input[type=text], select, option
+
+    input[type=text]
+      &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &:-moz-placeholder
+
+    button
+      margin-top: 0px
+
+    .agree_field
+      color: #002e42
+
+      a
+        color: #002e42
+
+  #form5
+    width: 100%
+    padding: 0
+    border-right: none
+    background: none
+
+    .form-group
+      width: 100%
+
+  .test-drive
+    background-position: 50% 22%
+    background-size: 100%
+
+  #form5
+    .form_title
+      font-size: 30px
+      padding-bottom: 260px
+
+    .comment
+      font-size: 20px
+      padding-bottom: 20px
+
+  .dist_work
+    background: rgba(235, 235, 235, 0.7)
+    padding: 40px 0
+
+  .dist_work_block
+    background-size: 100%
+    background-position: 50% 39%
+
+  .dist_work .title
+    font-size: 30px
+    padding-bottom: 175px
+
+  .dist_work_block .btn
+    width: 100%
+
+  .dist_work .comment
+    font-size: 20px
+    padding-bottom: 40px
+
+  #form3
+    margin: 0px
+    padding-bottom: 15px
+    padding-top: 20px
+
+    .form_title
+      width: 100%
+      font-size: 37px
+
+      span
+
+    .columns
+      display: block
+
+      .column
+
+    .comment, .form_comment span
+
+    .form-group
+      width: 100%
+
+    input[type=text], select, option
+
+    input[type=text]
+      &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &:-moz-placeholder
+
+    button, .agree_field a
+
+  .contacts
+    position: relative
+    top: 0px
+    padding: 0px
+    text-align: left
+    padding-bottom: 15px
+
+    .title2, .comment, .bottom_addr, .bottom_worktime, .bottom_phone
+
+    .btn
+      position: relative
+      bottom: auto
+      right: auto
+      width: 100%
+      margin-top: 15px
+
+  footer
+    display: none
+
+  .disclamer_switch, .disclamer, footer .disclamer, #map1
+
+//MOBILE END
+
+//Portrait phones and smaller
+@media (max-width: 576px)
+  .banner
+    background: url(../img/banner_mob.jpg) 50% 0px no-repeat
+    background-size: 110%
+    background-position: 40% 144px
+
+  .title1_container
+    .title1
+      font-size: 21px
+
+    .title_comment
+      font-size: 26px
+
+@media (max-width: 390px)
+  .title1_container .title1
+    font-size: 20px
+
+  #form2 .comment
+    color: #002e42
+    padding-bottom: 143px
+
+@media (max-width: 375px)
+  .title1_container
+    .title1
+      padding-left: 10px
+      font-size: 20px
+
+    .title2 .title2_text
+      padding-left: 10px
+      font-size: 22px
+
+@media (max-width: 360px)
+  .fam_text
+    font-size: 20px
+
+  .title1_container
+    .title1
+      padding-left: 10px
+      font-size: 19px
+
+    .title2 .title2_text
+      margin-top: 260px
+
+  #form5 .form_title, .dist_work .title
+    font-size: 28px
+
+  .cars_items > li .props_items a
+    span
+      font-size: 18px
+      width: auto
+      height: 30px
+
+    font
+      font-size: 12px
+
+@media (max-width: 320px)
+  body
+    background-position: 85% 230px
+
+  .banner
+    // background-position: center 170px;
+
+  .title1_container
+    margin-top: 45px
+
+    .title1
+      font-size: 24px
+      margin-bottom: 20px
+      padding-left: 10px
+
+    .title_comment
+      font-size: 22px
+
+  .timer_container
+    .mtimer
+      transform: scale(0.5)
+      height: 75px
+
+    .title1
+      font-size: 22px
+
+  .title1_container .title1 span
+    font-size: 20px
+
+  #form2 .comment
+    padding-bottom: 120px
+    font-size: 26px
+
+  .banner
+    background-position: 60% 135px
+
+  #form5 .form_title
+    font-size: 24px
+    padding-bottom: 220px
+
+  .dist_work_block
+    background-size: 100%
+    background-position: 50% 30%
+
+  .dist_work .title
+    font-size: 24px
+    padding-bottom: 150px
+
+// TABLE
+
+.resp_table
+  width: 100%
+
+  tr td:before
+    display: none
+
+  img
+    max-width: 100%
+
+.choose_model
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 50%
+  display: none
+
+  .choose_name
+    cursor: pointer
+    width: 33.333%
+    text-align: center
+    padding: 30px
+    font-size: 24px
+    background: #ebebeb
+
+    &:hover, &.current
+      background: #a21039
+      color: white
+
+#filter_table
+  margin-bottom: 20px
+  padding-top: 30px
+  display: flex
+  justify-content: space-between
+
+  .select_container
+    border-radius: 0px
+
+    // border: 1px solid #ebebeb
+    display: inline-block
+    width: 31%
+
+  select
+    outline: none
+    max-width: 100%
+    background: transparent url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHBAMAAADOnLEXAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEXdco/OM13sscHWU3bHFETpobT77/Plkaj////aYoL7DgctAAAAAWJLR0QIht6VegAAAAd0SU1FB+MHGBYlCmsEhtcAAAAuSURBVAjXY2AUBAIhBhMXIHBlSAZRFQxtQK57B0MHkFsBpNpM3DuAVEdmREcHAAlEDcrsG7bCAAAAAElFTkSuQmCC) right 20px center no-repeat !important
+    appearance: none
+    -moz-appearance: none
+    -webkit-appearance: none
+    cursor: pointer
+    height: 60px
+    width: 100%
+    padding: 10px 20px
+    color: black
+
+    &[name="models"], &[name="complects"], &[name="engine"]
+
+.tb_complects
+  width: 100%
+  margin: 0px auto
+  padding-bottom: 19px
+  border-collapse: collapse
+  margin-top: 30px
+
+  tr
+    margin-bottom: 13px
+
+    &:first-child
+      display: none
+
+    &:nth-child(1)
+      display: table-row !important
+      background: #ebebeb
+      border-top: 2px solid #c71444
+
+    th
+      padding: 13px 0px
+      text-align: left
+      padding: 20px
+      font-size: 20px
+
+      &:nth-child(2)
+        padding: 0
+
+        span
+          position: relative
+          left: 50px
+
+    td
+      font-family: $default-font
+      font-size: 18px
+      text-align: center
+      vertical-align: top
+      border-bottom: 1px solid #b7b7b7
+      vertical-align: middle
+      padding: 0px
+      font-weight: 400
+
+      &:nth-child(1)
+        width: 12%
+
+      &:nth-child(2)
+        width: 10%
+        font-weight: 700
+
+      &:nth-child(3)
+        width: 28%
+        text-align: left
+
+      &:nth-child(4)
+        width: 26%
+
+      .model
+        padding: 20px
+
+        img
+          max-width: 280px
+
+      .complect
+        padding: 20px
+
+    .buttons_wrap
+      > div
+        padding: 20px
+        display: flex
+        flex-direction: column
+
+      a
+        margin-bottom: 10px
+
+    td
+      .engine
+        padding: 20px
+
+      .compl_price
+        //font-family: $default-font
+        text-align: left
+
+        a
+          font-size: 16px
+          text-decoration: none
+          color: #000000
+          display: block
+          padding-bottom: 10px
+
+          span
+            font-family: $default-font
+            color: #aa0936
+            font-size: 20px
+
+      .props
+        display: flex
+        align-items: center
+        text-decoration: none
+        color: #000
+
+        span
+          padding-left: 15px
+          font-size: 16px
+          font-weight: 400
+
+        .pts b
+          color: #02923c
+
+        .hit b
+          color: #aa0936
+
+        .day_car b
+          color: #0095d6
+
+        .disc b
+          color: #ec6300
+
+      .title
+
+      .price
+        color: black
+        font-size: 22px
+        font-weight: 700
+        padding-bottom: 9px
+
+        span
+          text-decoration: line-through
+
+      .popup
+        width: 100%
+        margin-top: 0px
+        margin-left: 12px
+
+      .link
+        color: #39a1d7
+        display: block
+        margin-bottom: 9px
+
+.tb_complects_showmore
+  //font-size: 16px
+  //font-weight: 300
+  max-width: 234px
+
+  //border-color: #d3d3d3 !important
+  //color: black !important
+  margin-top: 25px
+
+  span
+    text-align: center
+
+.tb_complects tr
+  display: none
+
+  &.show
+    display: table-row
+
+    //background: url(../img/list.bg.png) left 17px no-repeat
+
+  &.megahide
+    display: none !important
+
+@media (min-width: 768px) and (max-width: 1199px)
+  .tb_complects tr
+    td:nth-child(5)
+      width: 30%
+
+    .buttons_wrap > div
+      flex-wrap: wrap
+
+    td
+      .popup:last-child
+        margin-top: 10px
+
+      .props span
+        padding-left: 10px
+        font-size: 14px
+        font-weight: 400
+        text-align: left
+
+@media (min-width: 768px) and (max-width: 992px)
+  .choose_model
+    width: 70%
+
+  .tb_complects tr
+    .buttons_wrap > div
+      padding: 20px 0
+      display: flex
+      flex-wrap: wrap
+
+    td
+      .popup
+        margin-left: 0
+
+        &:last-child
+          margin-top: 10px
+
+      &:nth-child(3)
+        width: 22%
+        text-align: left
+
+      &:nth-child(4)
+        width: 20%
+
+      .props span
+        padding-left: 5px
+        font-size: 14px
+        font-weight: 400
+        text-align: left
+
+      &:nth-child(5)
+        width: 25%
+
+//MOBILE BEGIN
+@media (max-width: 767px)
+  .resp_table
+    tr
+      padding-bottom: 20px
+      flex-direction: column
+
+      th
+        display: none
+
+      td
+        width: 100%
+        display: block
+        box-sizing: border-box
+        padding: 5px 0px
+        border-bottom: 0px
+
+        &:nth-child(1)
+          width: 100%
+
+        &:nth-child(2)
+          width: 100%
+          text-align: left
+
+        &:nth-child(3)
+          width: 100%
+          flex-wrap: wrap
+
+        &:nth-child(4), &:nth-child(5)
+          width: 100%
+
+    .btn
+      font-size: 16px
+      display: flex
+      align-items: center
+      justify-content: center
+      padding-bottom: 0px
+      padding-top: 0px
+
+      //.resp_table tr td:before
+       //      display: block
+       //      width: 100%
+       //      margin-right: unset
+       //      font-weight: 700
+       //    text-align: left
+
+  .tb_complects tr td .props span
+    text-align: left
+
+  .choose_model
+    display: none
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    margin-top: 15px
+
+    .choose_name
+      font-size: 20px
+      padding: 20px
+
+  #filter_table
+    flex-direction: column
+    margin-top: 0px
+    padding-top: 20px
+    padding-bottom: 0px
+    margin-bottom: 10px
+
+    .select_container
+      width: 100%
+      margin-bottom: 6px
+
+  .tb_complects tr
+    td .complect
+      padding: 0px
+
+    .buttons_wrap
+      > div
+        padding: 0px
+        display: flex
+        flex-wrap: wrap
+
+      a
+        padding: 0px
+        margin: 0px
+        width: 100%
+        margin-bottom: 4px
+
+    td .model
+      padding: 0px
+      margin-top: 20px
+
+@media (max-width: 320px)
+  .choose_model .choose_name
+    font-size: 16px
+    padding: 14px
