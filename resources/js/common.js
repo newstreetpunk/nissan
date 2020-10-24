@@ -33,39 +33,6 @@ function init_row_toggle()
 
 }
 
-function initYandexMap() {
-	if ($("#map1").length > 0)
-	{
-		ymaps.ready(function () {
-			var _ball_bg = './img/map.balloon.png';
-			var _ball_Offset = [-23, -46];
-			var _ball_Size = [46, 46];
-			var myMap = new ymaps.Map('map1', {
-				center: [53.1846,50.1511],
-				zoom: 16,
-				controls: ["zoomControl"]
-			}, {
-				searchControlProvider: 'yandex#search'
-			});
-			var myPlacemark1 = new ymaps.Placemark([53.1846,50.1511], {
-					balloonContent: "г. Самара, ул. Новоурицкая, 22",
-					hintContent: "г. Самара, ул. Новоурицкая, 22"
-				}, {
-					iconLayout: 'default#image',
-					// Своё изображение иконки метки.
-					iconImageHref: _ball_bg,
-					// Размеры метки.
-					iconImageSize: _ball_Size,
-					// Смещение левого верхнего угла иконки относительно
-					// её "ножки" (точки привязки).
-					iconImageOffset: _ball_Offset
-				});
-			myMap.geoObjects.add(myPlacemark1);
-		})
-	}
-}
-
-
 function initFancy()
 {
 
@@ -413,14 +380,22 @@ $( function() {
 	init_agree();
 	anchor_click();
 	init_topmenu();
-	initYandexMap();
 	initFancy();
 	initForm();
 	init_resp_table();
 	init_row_toggle();
 	_init_tabs();
 	
-	AOS.init();
+	AOS.init({
+		// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+		offset: 80, // offset (in px) from the original trigger point
+		delay: 0, // values from 0 to 3000, with step 50ms
+		duration: 300, // values from 0 to 3000, with step 50ms
+		easing: 'linear', // default easing for AOS animations
+		once: false, // whether animation should happen only once - while scrolling down
+		mirror: true, // whether elements should animate out while scrolling past them
+		anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+	});
 	initHighLightText();
 
 	$('.disclamer_switch').click(function () {

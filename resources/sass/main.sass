@@ -1836,9 +1836,9 @@ header .btn
 
 .contacts
   position: absolute
-  z-index: 1
+  z-index: 9
   background: white
-  top: 33px
+  top: 58px
   left: 0px
   padding: 26px
   width: 505px
@@ -1905,6 +1905,100 @@ footer .disclamer
 
 #map1
   height: 380px
+  background-image: url(../img/map.jpg)
+  background-color: #ccc
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  width: 100%
+  position: relative
+  overflow: hidden
+  cursor: pointer
+
+.loader 
+  position: absolute
+  z-index: 8
+  top: -100%
+  left: 0
+  box-sizing: border-box
+  width: 100%
+  height: 100%
+  overflow: hidden
+  color: #000000
+  transition: opacity .7s ease
+  opacity: 0
+  background-color: rgba(0, 0, 0, .55)
+  border-color: transparent
+  &:after,
+  &:before 
+    box-sizing: border-box
+  &.is-active 
+    top: -1px
+    opacity: 1
+  &-default:after 
+    position: absolute
+    top: calc(50% - 24px)
+    left: calc(50% - 24px)
+    width: 48px
+    height: 48px
+    content: ''
+    -webkit-animation: rotation 1s linear infinite
+    animation: rotation 1s linear infinite
+    border: solid 8px #ffffff
+    border-left-color: transparent
+    border-radius: 50%
+
+#map
+  position: relative
+  z-index: 7
+  width: 100%
+  display: block
+  height: 100%
+  cursor: pointer
+  background-color: transparent
+
+.map-btn
+  font-size: 14px
+  padding-top: 4px
+  padding-bottom: 4px
+  height: auto
+  display: block
+  margin-top: 10px
+  font-weight: normal
+
+.map-phone
+  color: $blue
+  font-weight: bold
+  display: inline-block
+  text-decoration: none
+  font-size: 14px
+  &:hover
+    color: $bluehover
+
+@-webkit-keyframes rotation 
+  from 
+    transform: rotate(0)
+  to 
+    transform: rotate(359deg)
+  
+@keyframes rotation 
+  from 
+    transform: rotate(0)
+  to 
+    transform: rotate(359deg)
+
+@-webkit-keyframes blink 
+  from 
+    opacity: .5 
+  to 
+    opacity: 1
+
+@keyframes blink 
+  from 
+    opacity: .5   
+  to 
+    opacity: 1
+
 
 // 
 
@@ -2866,368 +2960,3 @@ footer .disclamer
   .dist_work .title
     font-size: 24px
     padding-bottom: 150px
-
-// TABLE
-
-.resp_table
-  width: 100%
-
-  tr td:before
-    display: none
-
-  img
-    max-width: 100%
-
-.choose_model
-  display: flex
-  justify-content: space-between
-  align-items: center
-  width: 50%
-  display: none
-
-  .choose_name
-    cursor: pointer
-    width: 33.333%
-    text-align: center
-    padding: 30px
-    font-size: 24px
-    background: #ebebeb
-
-    &:hover, &.current
-      background: #a21039
-      color: white
-
-#filter_table
-  margin-bottom: 20px
-  padding-top: 30px
-  display: flex
-  justify-content: space-between
-
-  .select_container
-    border-radius: 0px
-
-    // border: 1px solid #ebebeb
-    display: inline-block
-    width: 31%
-
-  select
-    outline: none
-    max-width: 100%
-    background: transparent url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHBAMAAADOnLEXAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEXdco/OM13sscHWU3bHFETpobT77/Plkaj////aYoL7DgctAAAAAWJLR0QIht6VegAAAAd0SU1FB+MHGBYlCmsEhtcAAAAuSURBVAjXY2AUBAIhBhMXIHBlSAZRFQxtQK57B0MHkFsBpNpM3DuAVEdmREcHAAlEDcrsG7bCAAAAAElFTkSuQmCC) right 20px center no-repeat !important
-    appearance: none
-    -moz-appearance: none
-    -webkit-appearance: none
-    cursor: pointer
-    height: 60px
-    width: 100%
-    padding: 10px 20px
-    color: black
-
-    &[name="models"], &[name="complects"], &[name="engine"]
-
-.tb_complects
-  width: 100%
-  margin: 0px auto
-  padding-bottom: 19px
-  border-collapse: collapse
-  margin-top: 30px
-
-  tr
-    margin-bottom: 13px
-
-    &:first-child
-      display: none
-
-    &:nth-child(1)
-      display: table-row !important
-      background: #ebebeb
-      border-top: 2px solid #c71444
-
-    th
-      padding: 13px 0px
-      text-align: left
-      padding: 20px
-      font-size: 20px
-
-      &:nth-child(2)
-        padding: 0
-
-        span
-          position: relative
-          left: 50px
-
-    td
-      font-family: $default-font
-      font-size: 18px
-      text-align: center
-      vertical-align: top
-      border-bottom: 1px solid #b7b7b7
-      vertical-align: middle
-      padding: 0px
-      font-weight: 400
-
-      &:nth-child(1)
-        width: 12%
-
-      &:nth-child(2)
-        width: 10%
-        font-weight: 700
-
-      &:nth-child(3)
-        width: 28%
-        text-align: left
-
-      &:nth-child(4)
-        width: 26%
-
-      .model
-        padding: 20px
-
-        img
-          max-width: 280px
-
-      .complect
-        padding: 20px
-
-    .buttons_wrap
-      > div
-        padding: 20px
-        display: flex
-        flex-direction: column
-
-      a
-        margin-bottom: 10px
-
-    td
-      .engine
-        padding: 20px
-
-      .compl_price
-        //font-family: $default-font
-        text-align: left
-
-        a
-          font-size: 16px
-          text-decoration: none
-          color: #000000
-          display: block
-          padding-bottom: 10px
-
-          span
-            font-family: $default-font
-            color: $red
-            font-size: 20px
-
-      .props
-        display: flex
-        align-items: center
-        text-decoration: none
-        color: #000
-
-        span
-          padding-left: 15px
-          font-size: 16px
-          font-weight: 400
-
-        .pts b
-          color: #02923c
-
-        .hit b
-          color: $red
-
-        .day_car b
-          color: #0095d6
-
-        .disc b
-          color: #ec6300
-
-      .title
-
-      .price
-        color: black
-        font-size: 22px
-        font-weight: 700
-        padding-bottom: 9px
-
-        span
-          text-decoration: line-through
-
-      .popup
-        width: 100%
-        margin-top: 0px
-        margin-left: 12px
-
-      .link
-        color: #39a1d7
-        display: block
-        margin-bottom: 9px
-
-.tb_complects_showmore
-  //font-size: 16px
-  //font-weight: 300
-  max-width: 234px
-
-  //border-color: #d3d3d3 !important
-  //color: black !important
-  margin-top: 25px
-
-  span
-    text-align: center
-
-.tb_complects tr
-  display: none
-
-  &.show
-    display: table-row
-
-    //background: url(../img/list.bg.png) left 17px no-repeat
-
-  &.megahide
-    display: none !important
-
-@media (min-width: 768px) and (max-width: 1199px)
-  .tb_complects tr
-    td:nth-child(5)
-      width: 30%
-
-    .buttons_wrap > div
-      flex-wrap: wrap
-
-    td
-      .popup:last-child
-        margin-top: 10px
-
-      .props span
-        padding-left: 10px
-        font-size: 14px
-        font-weight: 400
-        text-align: left
-
-@media (min-width: 768px) and (max-width: 992px)
-  .choose_model
-    width: 70%
-
-  .tb_complects tr
-    .buttons_wrap > div
-      padding: 20px 0
-      display: flex
-      flex-wrap: wrap
-
-    td
-      .popup
-        margin-left: 0
-
-        &:last-child
-          margin-top: 10px
-
-      &:nth-child(3)
-        width: 22%
-        text-align: left
-
-      &:nth-child(4)
-        width: 20%
-
-      .props span
-        padding-left: 5px
-        font-size: 14px
-        font-weight: 400
-        text-align: left
-
-      &:nth-child(5)
-        width: 25%
-
-//MOBILE BEGIN
-@media (max-width: 767px)
-  .resp_table
-    tr
-      padding-bottom: 20px
-      flex-direction: column
-
-      th
-        display: none
-
-      td
-        width: 100%
-        display: block
-        box-sizing: border-box
-        padding: 5px 0px
-        border-bottom: 0px
-
-        &:nth-child(1)
-          width: 100%
-
-        &:nth-child(2)
-          width: 100%
-          text-align: left
-
-        &:nth-child(3)
-          width: 100%
-          flex-wrap: wrap
-
-        &:nth-child(4), &:nth-child(5)
-          width: 100%
-
-    .btn
-      font-size: 16px
-      display: flex
-      align-items: center
-      justify-content: center
-      padding-bottom: 0px
-      padding-top: 0px
-
-      //.resp_table tr td:before
-       //      display: block
-       //      width: 100%
-       //      margin-right: unset
-       //      font-weight: 700
-       //    text-align: left
-
-  .tb_complects tr td .props span
-    text-align: left
-
-  .choose_model
-    display: none
-    justify-content: space-between
-    align-items: center
-    width: 100%
-    margin-top: 15px
-
-    .choose_name
-      font-size: 20px
-      padding: 20px
-
-  #filter_table
-    flex-direction: column
-    margin-top: 0px
-    padding-top: 20px
-    padding-bottom: 0px
-    margin-bottom: 10px
-
-    .select_container
-      width: 100%
-      margin-bottom: 6px
-
-  .tb_complects tr
-    td .complect
-      padding: 0px
-
-    .buttons_wrap
-      > div
-        padding: 0px
-        display: flex
-        flex-wrap: wrap
-
-      a
-        padding: 0px
-        margin: 0px
-        width: 100%
-        margin-bottom: 4px
-
-    td .model
-      padding: 0px
-      margin-top: 20px
-
-@media (max-width: 320px)
-  .choose_model .choose_name
-    font-size: 16px
-    padding: 14px

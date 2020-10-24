@@ -15,22 +15,10 @@
     <script>
         window.country = "Самара";
         window.addr = "г. Самара, ул. Новоурицкая, 22";
+        // КООРДИНАТЫ НЕ УДАЛЯТЬ!!!
         window.map_dot1 = "53.1846";
         window.map_dot2 = "50.1511";
     </script>
-    <!-- Яндкс карта -->
-    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-
-   <!--  <script type='text/javascript'>
-        (function (window, document) {
-            var elem = document.createElement('script');
-            elem.src = '//donkey.downfall.ru/api/donkey';
-            elem.type = 'text/javascript';
-            elem.async = true;
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(elem, s);
-        })(window, window.document);
-    </script> -->
 
     <link rel="stylesheet" href="css/main.min.css">
 
@@ -75,10 +63,7 @@
 <div class="container">
     <div class="title1_container" id="top">
         <div class="title1"
-        data-aos="fade-down"
-        data-aos-offset="0"
-        data-aos-delay="0"
-        data-aos-duration="300">
+        data-aos="fade-down">
           <b><i>КУРС РАСТЕТ, <br>А ЦЕНЫ НА NISSAN В ЭКСПЕРТ&nbsp;САМАРА — НЕТ!</i></b><br>
           <span>Выгода по Трейд&nbsp;Ин <br>до <b>170 000</b>&nbsp;рублей!</span>
         </div>
@@ -89,10 +74,7 @@
            data-form_name="callback"
            data-form_type_model_name=""
            data-form_diler=""
-           data-aos="fade-up" 
-           data-aos-offset="0"
-           data-aos-delay="800"
-           data-aos-duration="300">
+           data-aos="fade-up">
             <span>Узнать подробности</span>
         </a>
 
@@ -634,7 +616,7 @@
     <div class="container timer_container">
         <div class="title1">Срок действия акции до:</div>
         <div class="mtimer">
-            <script src="//megatimer.ru/get/f5d55947236aa3a8b89ea523cdeb9bda.js"></script>
+          <script src="//megatimer.ru/get/f5d55947236aa3a8b89ea523cdeb9bda.js"></script>
         </div>
     </div>
 </div>
@@ -668,30 +650,6 @@
         </form>
     </div>
 </div>
-
-
-<!--<div class="dist_work">
-    <div class="container">
-        <div class="dist_work_block">
-            <div class="title">
-                Дистанционное<br> оформление сделки
-            </div>
-            <div class="comment">
-                Оформите покупку, не выходя из дома,<br>
-                и мы доставим Ваш автомобиль<br>
-                к вашему дому
-            </div>
-            <a class="popup btn red arrow" href="#form_popup"
-               data-title="Дистанционное оформление сделки"
-               data-comment=""
-               data-form_name="callback"
-               data-form_type_model_name=""
-               data-form_diler="">
-                <span>Узнать подробности</span>
-            </a>
-        </div>
-    </div>
-</div>-->
 
 
 <div class="banner">
@@ -729,27 +687,6 @@
 </div>
 
 
-<!-- <div class="container">
-    <form id="form3" action="mail.php" method="POST" class="CKiForm" data-callkeeper_name="ЕСТЬ ПРЕДЛОЖЕНИЕ? СДЕЛАЕМ ЛУЧШЕ!" data-flash-title="ЕСТЬ ПРЕДЛОЖЕНИЕ? СДЕЛАЕМ ЛУЧШЕ!">
-        <input name="title"   				type="hidden" value="ЕСТЬ ПРЕДЛОЖЕНИЕ? СДЕЛАЕМ ЛУЧШЕ!">
-        <input name="comment" 				type="hidden" value="">
-        <input name="form_name" 			type="hidden" value="">
-        <input name="form_type_model_name"	type="hidden" value="">
-        <input name="form_diler" 			type="hidden" value="">
-        <div class="columns">
-            <div class="form_title">ЕСТЬ ПРЕДЛОЖЕНИЕ? <span>СДЕЛАЕМ ЛУЧШЕ!</span></div>
-            <div class="form-group">
-                <input type="text" name="phone" class="nacc form-control" placeholder="Ваш телефон" data-callkeeper="tel" data-flash="phone">
-            </div>
-            <div class="form-group">
-                <button type="submit" class="form-control  CKFormTrigger btn red arrow FlashFormSubmit"><span>Оформить заявку</span></button>
-            </div>
-        </div>
-        <label class="agree_field"><input type="checkbox" name="agree" value="1" checked="checked">я согласен с <a target="_blank" href="/policy.php">условиями обработки персональных данных</a></label>
-    </form>
-</div> -->
-
-
 <div class="container">
     <div class="contacts">
         <div class="title2">Контакты</div>
@@ -767,7 +704,11 @@
         </a>
     </div>
 </div>
-<div id="map1"></div>
+
+<div id="map1">
+  <span class="loader loader-default"></span>
+  <span id="map"></span>
+</div>
 
 
 <footer>
