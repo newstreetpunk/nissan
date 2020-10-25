@@ -133,9 +133,12 @@ function promo_nissan_scripts() {
 function promo_nissan_images() {
 	return src(projects.promo_nissan.images.src)
 	.pipe(newer(projects.promo_nissan.images.dest))
-	.pipe(imagemin([
-            pngquant(),            
-        ],{
+	.pipe(imagemin({
+			progressive: true,
+    		optimizationLevel: 10,
+            svgoPlugins: [{removeViewBox: false}],
+    		use: [pngquant()]            
+        },{
             verbose: true
         }))
 	.pipe(dest(projects.promo_nissan.images.dest))
