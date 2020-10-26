@@ -1199,16 +1199,16 @@ header .btn
       position: relative
 
     .btn.rassrochka
-      // position: absolute
-      // left: 0
-      // bottom: 90px
-      width: 240px
+      font-size: 16px
       text-transform: none
       text-align: center
       padding-left: 0
       background: $red
       margin-top: 50px
-
+      max-width: 230px
+      line-height: 1.2
+      span
+         width: auto
       &:before
         content: ''
         display: block
@@ -1234,7 +1234,7 @@ header .btn
 
     .image_container .image
       position: absolute
-      left: 200px
+      right: 0
       top: -10px
 
     &#sx4 .image_container .image
@@ -1244,7 +1244,8 @@ header .btn
       left: 250px
 
     .image_container img
-      max-width: 100%
+      max-width: 540px
+      width: 100%
 
     .car_title
       font-size: 30px
@@ -1255,14 +1256,14 @@ header .btn
       z-index: 1
 
       span
-        font-size: 38px
+        font-size: 32px
         color: $blue
-        padding-bottom: 15px
+        padding-bottom: 5px
         display: block
 
       b
         color: $red
-        font-size: 24px
+        font-size: 20px
 
         &.show
           animation: blurblack 2s ease-out
@@ -2968,3 +2969,74 @@ footer .disclamer
   .dist_work .title
     font-size: 24px
     padding-bottom: 150px
+
+// DIY MEDIA 
+
+@media (max-width: 1200px)
+   .cars_items>li .image_container
+      width: 68%
+   .cars_items>li .props
+      width: 32%
+   .cars_items>li .image_container .image
+      top: -20px
+      right: -20px
+   .cars_items>li .image_container img
+      max-width: 460px
+   .cars_items>li .props_price a, .cars_items>li .props_price .cred
+      font-size: 19px
+
+@media (max-width: 992px)
+   .cars_items>li
+      flex-wrap: wrap
+   .cars_items>li .image_container, .cars_items>li .props
+      width: 100%
+   .cars_items>li .image_container
+      margin-bottom: 30px
+   .cars_items>li .image_container .image
+      right: 0
+   .cars_items>li .btns
+      flex-direction: row
+      justify-content: space-between
+      flex-wrap: wrap
+   .cars_items>li .btns .btn
+      width: 48%
+   .props_price
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+   .cars_items>li .props_price .cred, .cars_items>li .props_price a
+      margin-left: 20px
+      margin-right: 20px
+
+@media (max-width: 768px)
+   .cars_items>li .image_container img
+      max-width: 100%
+   .cars_items>li
+      padding-top: 0
+      margin-top: 50px
+      padding-bottom: 0
+   .cars_items>li .btns
+      padding-bottom: 0
+   .cars_items>li .btn.rassrochka
+      margin: 0 auto
+      max-width: 320px
+      width: 100%
+   .props_price
+      flex-direction: column
+   .cars_items>li .props_price .cred, .cars_items>li .props_price a
+      margin-left: 0
+      margin-right: 0
+   .cars_items>li .car_title
+      text-align: center
+      margin-bottom: 20px
+
+@media (max-width: 576px)
+   .cars_items>li .car_title
+      text-align: left
+   .cars_items>li .btn.rassrochka
+      margin-right: auto
+      margin-left: 0
+   .cars_items>li .btns .btn
+      width: 100%
+
+   
