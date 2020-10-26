@@ -10,474 +10,310 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="Продажа новых Ниссан по специальной акции от официального дилера Nissan Эксперт Самара. Индивидуальные предложения по телефону. Акция действует до ...">
+		
+		<!-- Favicon -->
 		<link rel="icon" href="img/logo.svg">
+		
+		<!-- Styles -->
+		<link rel="stylesheet" href="css/main.min.css?261020202005">
 
+		<!-- Variables for Map -->
 		<script>
 			window.country = "Самара";
+			// НЕ УДАЛЯТЬ!!!
 			window.addr = "г. Самара, ул. Новоурицкая, 22А";
-			// КООРДИНАТЫ НЕ УДАЛЯТЬ!!!
 			window.map_dot1 = "53.18408591547759";
 			window.map_dot2 = "50.15186940668391";
 		</script>
-
-		<link rel="stylesheet" href="css/main.min.css?261020202005">
 
 	</head>
 
 	<body>
 
-		<header>
-			<div class="container">
-				<a class="anchor" href="#top"	data-title="" data-comment=""	data-form_name=""	data-form_type_model_name="" data-form_diler="">
-					<img class="logo1" src="img/logo.svg" alt="logo">
-					<img class="logo1 mob" src="img/logo.svg" alt="logo">
-				</a>
+	<header>
+		<div class="container">
+			<a class="anchor" href="#top">
+				<img class="logo1" src="img/logo.svg" alt="logo">
+				<img class="logo1 mob" src="img/logo.svg" alt="logo">
+			</a>
 
-				<div class="addr_container">
-					<a class="top_addr anchor ico_addr" href="#map1">Самара</a>
-					<div class="worktime">Пн-сб с 9:00 до 21:00, вс. 9:00 до 19:00</div>
-				</div>
-				<a class="top_phone" href="tel:+78469777779">8 (846) 9 77777 9</a>
-				<a class="popup btn arrow" href="#form_popup" data-title="Заказать звонок"	data-comment="" data-form_name="callback"		data-form_type_model_name="" data-form_diler="">
-					<span>Заказать звонок</span>
-				</a>
-
-				<a href="#"><img class="logo2" src="img/logo-expert-samara-color.svg" alt="logo"></a>		
+			<div class="addr_container">
+				<a class="top_addr anchor ico_addr" href="#map1">Самара</a>
+				<div class="worktime">Пн-сб с 9:00 до 21:00, вс. 9:00 до 19:00</div>
 			</div>
-		</header>
+			<a class="top_phone" href="tel:+78469777779">8 (846) 9 77777 9</a>
+			<a class="popup btn arrow" href="#form_popup" data-title="Заказать звонок">
+				<span>Заказать звонок</span>
+			</a>
 
-		<div class="top-banner">
-			<div class="container">
-				<div class="title1_container" id="top">
-					<div class="top-banner__title">
-						<div class="title1">
-							<b><i>Курс растет, а цены на Nissan в Эксперт&nbsp;Самара — нет!</i></b><br>
-							<span>Выгода по Трейд&nbsp;Ин до&nbsp;<b>170&nbsp;000</b>&nbsp;рублей!</span>
-						</div>
-
-						<a class="popup btn arrow red" href="#form_popup" data-title="Узнать подробности" data-comment="" data-form_name="callback" data-form_type_model_name="" data-form_diler=""><span>Узнать подробности</span></a>
-					</div>
-					<!-- /.top-banner__title -->
-
-					<div class="advantages_container">
-						<ul class="advantages">
-							<li>
-								<a class="popup ico0" href="#form_popup" data-title="Комплект зимней резины в&nbsp;подарок!"	data-comment="" data-form_name="callback"	data-form_type_model_name="" data-form_diler="">
-									<span>Льготная <br>кредитная <br><strong>ставка 0,1%</strong></span>
-								</a>
-							</li>
-							<li>
-								<a class="popup ico1" href="#form_popup"	data-title="Бонус до 450&nbsp;000&nbsp;₽"	data-comment="" data-form_name="callback"	data-form_type_model_name=""	data-form_diler="">
-									<span>Скидка&nbsp;<strong>30&nbsp;000₽</strong><br> за лояльный <br>Трейд&nbsp;Ин</span>
-								</a>
-							</li>
-							<li>
-								<a class="popup ico2" href="#form_popup"
-								data-title="5&nbsp;лет гарантии в&nbsp;подарок"	data-comment=""
-								data-form_name="callback"
-								data-form_type_model_name=""
-								data-form_diler="">
-									<span>Выгода по<br> Трейд&nbsp;Ин<br> <strong>170&nbsp;000₽</strong></span>
-								</a>
-							</li>
-							<li>
-								<a class="popup ico4" href="#form_popup"
-								data-title="Оплатим дорогу до&nbsp;ДЦ "
-								data-comment=""
-								data-form_name="callback"
-								data-form_type_model_name=""
-								data-form_diler="">
-									<span>Скидка <br><strong>20&nbsp;000₽</strong> на доп.&nbsp;оборудование</span>
-								</a>
-							</li>
-						</ul>
-						<form id="form1" action="mail.php" method="POST" class="CKiForm" data-callkeeper_name="Оформите заявку на новый suzuki и получите тройную выгоду!"	data-flash-title="Оформите заявку на новый suzuki и получите тройную выгоду!">
-							<input name="title" type="hidden" value="Оформите заявку на новый suzuki и получите тройную выгоду!">
-							<input name="comment" type="hidden" value="">
-							<input name="form_name" type="hidden" value="">
-							<input name="form_type_model_name" type="hidden" value="">
-							<input name="form_diler" type="hidden" value="">
-							<div class="columns">
-								<div class="form-group">
-									<input type="text" name="phone" class="nacc form-control" placeholder="Ваш телефон"
-									data-callkeeper="tel" data-flash="phone">
-								</div>
-								<div class="form-group">
-									<button type="submit" class="form-control  CKFormTrigger btn arrow FlashFormSubmit"><span>получить выгоду</span>
-									</button>
-								</div>
-							</div>
-							<label class="agree_field"><input type="checkbox" name="agree" value="1" checked="checked">я согласен с
-								<a target="_blank" href="/policy.php">условиями обработки персональных данных</a>
-							</label>
-						</form>
-					</div>
-				</div>
-			</div>
+			<a href="#"><img class="logo2" src="img/logo-expert-samara-color.svg" alt="logo"></a>		
 		</div>
-		<!-- /.top-banner -->
+	</header>
 
-		<div class="timer">
-			<div class="container timer_container">
-				<div class="title1">Срок действия акции до:</div>
-				<div class="mtimer">
-					<script src="//megatimer.ru/get/f5d55947236aa3a8b89ea523cdeb9bda.js"></script>
+	<div class="top-banner">
+		<div class="container">
+			<div class="title1_container" id="top">
+				<div class="top-banner__title">
+					<div class="title1">
+						<b><i>Курс растет, а цены на Nissan в Эксперт&nbsp;Самара — нет!</i></b><br>
+						<span>Выгода по Трейд&nbsp;Ин до&nbsp;<b>170&nbsp;000</b>&nbsp;рублей!</span>
+					</div>
+
+					<a class="popup btn arrow red" href="#form_popup" data-title="Узнать подробности" data-comment="" data-form_name="callback" data-form_type_model_name="" data-form_diler=""><span>Узнать подробности</span></a>
 				</div>
-			</div>
-		</div>
+				<!-- /.top-banner__title -->
 
-		<div class="cars_wrapper">
-			<div class="container">
-				<ul class="cars_items">
-					<li id="nissan_terrano">
-						<div class="image_container">
-
-							<div class="car_title">
-								<span>Nissan TERRANO</span>
-								<b><font>Спеццена до 27 октября</font></b><br>
-								от 1&nbsp;031&nbsp;000&nbsp;₽<br>
-														<!-- подарок 80 000 руб.<br>
-														от АВТОМИРА</b>-->
-													</div>
-
-													<a class="popup image" href="#form_popup"
-													data-title="Узнать цену"
-													data-comment=""
-													data-form_name="callback"
-													data-form_type_model_name=""
-													data-form_diler="">
-													<img src="img/avto/nissan_terrano/1.png" alt="Nissan TERRANO">
-												</a>
-
-												<a class="popup btn rassrochka" href="#form_popup"
-												data-title="Получить сниженную <br>% ставку по кредиту"
-												data-comment=""
-												data-form_name="callback"
-												data-form_type_model_name=""
-												data-form_diler="">
-												<i></i><span>Получить сниженную <br>% ставку по кредиту</span>
-												</a>
-
-												</div>
-
-
-												<div class="props">
-													<div class="props_price">
-														<a class="popup vigoda" href="#form_popup"
-														data-title="Выгода до 220 000 руб."
-														data-comment=""
-														data-form_name="callback"
-														data-form_type_model_name=""
-														data-form_diler="">
-														Выгода до <span>80&nbsp;000&nbsp;₽</span>
-													</a>
-													<a class="popup cred" href="#form_popup"
-													data-title="0 руб. Первый взнос"
-													data-comment=""
-													data-form_name="callback"
-													data-form_type_model_name=""
-													data-form_diler="">
-													Выгода по Трейд Ин <span>60&nbsp;000&nbsp;₽</span>
-												</a>
-												<a class="popup cred" href="#form_popup"
-												data-title="0 руб. Первый взнос"
-												data-comment=""
-												data-form_name="callback"
-												data-form_type_model_name=""
-												data-form_diler="">
-												Выгода по программе «В&nbsp;кругу&nbsp;Nissan» <span>20&nbsp;000&nbsp;₽</span>
-											</a>
-										</div>
-										<div class="btns">
-											<a class="popup btn arrow" href="#form_popup"
-											data-title="Рассчитать кредит"
-											data-comment=""
-											data-form_name="callback"
-											data-form_type_model_name=""
-											data-form_diler="">
-											<span>Рассчитать кредит</span>
-										</a>
-										<a class="popup btn arrow red" href="#form_popup"
-										data-title="Узнать цену"
-										data-comment=""
-										data-form_name="callback"
-										data-form_type_model_name=""
-										data-form_diler="">
-										<span>Узнать цену</span>
-									</a>
-								</div>
-							</div>
+				<div class="advantages_container">
+					<ul class="advantages">
+						<li>
+							<a class="popup ico0" href="#form_popup" data-title="Комплект зимней резины в&nbsp;подарок!"	data-comment="" data-form_name="callback"	data-form_type_model_name="" data-form_diler="">
+								<span>Льготная <br>кредитная <br><strong>ставка 0,1%</strong></span>
+							</a>
 						</li>
-
-						<li id="nissan_qashqai">
-							<div class="image_container">
-
-								<div class="car_title">
-									<span>Nissan QASHQAI</span>
-									<b><font>Спеццена до 27 октября</font></b><br>
-									от 1&nbsp;303&nbsp;000&nbsp;₽<br>
-														<!-- подарок 80 000 руб.<br>
-														от АВТОМИРА</b>-->
-													</div>
-
-													<a class="popup image" href="#form_popup"
-													data-title="Узнать цену"
-													data-comment=""
-													data-form_name="callback"
-													data-form_type_model_name=""
-													data-form_diler="">
-													<img src="img/avto/nissan_qashqai/1.png" alt="Nissan QASHQAI">
-												</a>
-
-												<a class="popup btn rassrochka" href="#form_popup"
-												data-title="Получить сниженную <br>% ставку по кредиту"
-												data-comment=""
-												data-form_name="callback"
-												data-form_type_model_name=""
-												data-form_diler="">
-												<i></i><span>Получить сниженную <br>% ставку по кредиту</span>
-												</a>
-
-												</div>
-
-
-												<div class="props">
-													<div class="props_price">
-														<a class="popup vigoda" href="#form_popup"
-														data-title="Выгода до 220 000 руб."
-														data-comment=""
-														data-form_name="callback"
-														data-form_type_model_name=""
-														data-form_diler="">
-														Выгода до <span>130&nbsp;000&nbsp;₽</span>
-													</a>
-													<a class="popup cred" href="#form_popup"
-													data-title="0 руб. Первый взнос"
-													data-comment=""
-													data-form_name="callback"
-													data-form_type_model_name=""
-													data-form_diler="">
-													Выгода по Трейд Ин <span>100&nbsp;000&nbsp;₽</span>
-												</a>
-												<a class="popup cred" href="#form_popup"
-												data-title="0 руб. Первый взнос"
-												data-comment=""
-												data-form_name="callback"
-												data-form_type_model_name=""
-												data-form_diler="">
-												Выгода по программе «В&nbsp;кругу&nbsp;Nissan» <span>30&nbsp;000&nbsp;₽</span>
-											</a>
-										</div>
-										<div class="btns">
-											<a class="popup btn arrow" href="#form_popup"
-											data-title="Рассчитать кредит"
-											data-comment=""
-											data-form_name="callback"
-											data-form_type_model_name=""
-											data-form_diler="">
-											<span>Рассчитать кредит</span>
-										</a>
-										<a class="popup btn arrow red" href="#form_popup"
-										data-title="Узнать цену"
-										data-comment=""
-										data-form_name="callback"
-										data-form_type_model_name=""
-										data-form_diler="">
-										<span>Узнать цену</span>
-									</a>
-								</div>
-							</div>
+						<li>
+							<a class="popup ico1" href="#form_popup"	data-title="Бонус до 450&nbsp;000&nbsp;₽"	data-comment="" data-form_name="callback"	data-form_type_model_name=""	data-form_diler="">
+								<span>Скидка&nbsp;<strong>30&nbsp;000₽</strong><br> за лояльный <br>Трейд&nbsp;Ин</span>
+							</a>
 						</li>
-
-						<li id="nissan_x_trail">
-							<div class="image_container">
-
-								<div class="car_title">
-									<span>Nissan XTRAIL</span>
-									<b><font>Спеццена до 27 октября</font></b><br>
-									от 1&nbsp;549&nbsp;000&nbsp;₽<br>
-														 <!-- подарок 30 000 руб.<br>
-														 от ЭКСПЕРТ САМАРА</b> -->
-													 </div>
-
-													 <a class="popup image" href="#form_popup"
-													 data-title="Узнать цену"
-													 data-comment=""
-													 data-form_name="callback"
-													 data-form_type_model_name=""
-													 data-form_diler="">
-													 <img src="img/avto/nissan_x_trail/1.png" alt="Nissan XTRAIL">
-												 </a>
-
-												 <a class="popup btn rassrochka" href="#form_popup"
-												data-title="Получить сниженную <br>% ставку по кредиту"
-												data-comment=""
-												data-form_name="callback"
-												data-form_type_model_name=""
-												data-form_diler="">
-												<i></i><span>Получить сниженную <br>% ставку по кредиту</span>
-												</a>
-
-												</div>
-
-
-												<div class="props">
-													<div class="props_price">
-														<a class="popup vigoda" href="#form_popup"
-														data-title="Выгода до 220 000 руб."
-														data-comment=""
-														data-form_name="callback"
-														data-form_type_model_name=""
-														data-form_diler="">
-														Выгода до <span>200&nbsp;000&nbsp;₽</span>
-													</a>
-													<a class="popup cred" href="#form_popup"
-													data-title="0 руб. Первый взнос"
-													data-comment=""
-													data-form_name="callback"
-													data-form_type_model_name=""
-													data-form_diler="">
-													Выгода по Трейд Ин <span>170&nbsp;000 руб.</span>
-												</a>
-												<a class="popup cred" href="#form_popup"
-												data-title="0 руб. Первый взнос"
-												data-comment=""
-												data-form_name="callback"
-												data-form_type_model_name=""
-												data-form_diler="">
-												Выгода по программе «В&nbsp;кругу&nbsp;Nissan» <span>30&nbsp;000&nbsp;₽</span>
-											</a>
-										</div>
-										<div class="btns">
-											<a class="popup btn arrow" href="#form_popup"
-											data-title="Рассчитать кредит"
-											data-comment=""
-											data-form_name="callback"
-											data-form_type_model_name=""
-											data-form_diler="">
-											<span>Рассчитать кредит</span>
-										</a>
-										<a class="popup btn arrow red" href="#form_popup"
-										data-title="Узнать цену"
-										data-comment=""
-										data-form_name="callback"
-										data-form_type_model_name=""
-										data-form_diler="">
-										<span>Узнать цену</span>
-									</a>
-								</div>
-							</div>
+						<li>
+							<a class="popup ico2" href="#form_popup"
+							data-title="5&nbsp;лет гарантии в&nbsp;подарок"	data-comment=""
+							data-form_name="callback"
+							data-form_type_model_name=""
+							data-form_diler="">
+								<span>Выгода по<br> Трейд&nbsp;Ин<br> <strong>170&nbsp;000₽</strong></span>
+							</a>
 						</li>
-
-						<li id="nissan_murano">
-							<div class="image_container">
-
-								<div class="car_title">
-									<span>Nissan MURANO</span>
-									<b><font>Спеццена до 27 октября</font></b><br>
-									от 2&nbsp;399&nbsp;000&nbsp;₽<br>
-														 <!-- подарок 30 000 руб.<br>
-														 от ЭКСПЕРТ САМАРА</b> -->
-													 </div>
-
-													 <a class="popup image" href="#form_popup"
-													 data-title="Узнать цену"
-													 data-comment=""
-													 data-form_name="callback"
-													 data-form_type_model_name=""
-													 data-form_diler="">
-													 <img src="img/avto/nissan_murano/1.png" alt="Nissan MURANOL">
-												 </a>
-
-												 <a class="popup btn rassrochka" href="#form_popup"
-												data-title="Получить сниженную <br>% ставку по кредиту"
-												data-comment=""
-												data-form_name="callback"
-												data-form_type_model_name=""
-												data-form_diler="">
-												<i></i><span>Получить сниженную <br>% ставку по кредиту</span>
-												</a>
-
-												</div>
-
-
-												<div class="props">
-													<div class="props_price">
-														<a class="popup vigoda" href="#form_popup"
-														data-title="Выгода до 220 000 руб."
-														data-comment=""
-														data-form_name="callback"
-														data-form_type_model_name=""
-														data-form_diler="">
-														Выгода до <span>250&nbsp;000&nbsp;₽</span>
-													</a>
-													<a class="popup cred" href="#form_popup"
-													data-title="0 руб. Первый взнос"
-													data-comment=""
-													data-form_name="callback"
-													data-form_type_model_name=""
-													data-form_diler="">
-													Выгода по Трейд Ин <span>150&nbsp;000&nbsp;₽</span>
-												</a>
-												<a class="popup cred" href="#form_popup"
-												data-title="0 руб. Первый взнос"
-												data-comment=""
-												data-form_name="callback"
-												data-form_type_model_name=""
-												data-form_diler="">
-												Выгода по программе «В&nbsp;₽кругу&nbsp;Nissan» <span>100&nbsp;000&nbsp;₽</span>
-											</a>
-										</div>
-										<div class="btns">
-											<a class="popup btn arrow" href="#form_popup"
-											data-title="Рассчитать кредит"
-											data-comment=""
-											data-form_name="callback"
-											data-form_type_model_name=""
-											data-form_diler="">
-											<span>Рассчитать кредит</span>
-										</a>
-										<a class="popup btn arrow red" href="#form_popup"
-										data-title="Узнать цену"
-										data-comment=""
-										data-form_name="callback"
-										data-form_type_model_name=""
-										data-form_diler="">
-										<span>Узнать цену</span>
-									</a>
-								</div>
-							</div>
+						<li>
+							<a class="popup ico4" href="#form_popup"
+							data-title="Оплатим дорогу до&nbsp;ДЦ "
+							data-comment=""
+							data-form_name="callback"
+							data-form_type_model_name=""
+							data-form_diler="">
+								<span>Скидка <br><strong>20&nbsp;000₽</strong> на доп.&nbsp;оборудование</span>
+							</a>
 						</li>
-
 					</ul>
-				</div>
-			</div>
-
-			<div class="container">
-				<div class="fam_car">
-					<div class="fam_content">
-						<div class="fam_text">
-							<span>NISSAN X-Trail</span> автомобиль месяца<br>
-							<small>Дополнительная выгода при приобретении в кредит до конца месяца</small>
+					<form id="form1" action="mail.php" method="POST" class="CKiForm" data-callkeeper_name="Оформите заявку на новый suzuki и получите тройную выгоду!"	data-flash-title="Оформите заявку на новый suzuki и получите тройную выгоду!">
+						<input name="title" type="hidden" value="Оформите заявку на новый suzuki и получите тройную выгоду!">
+						<input name="comment" type="hidden" value="">
+						<input name="form_name" type="hidden" value="">
+						<input name="form_type_model_name" type="hidden" value="">
+						<input name="form_diler" type="hidden" value="">
+						<div class="columns">
+							<div class="form-group">
+								<input type="text" name="phone" class="nacc form-control" placeholder="Ваш телефон"
+								data-callkeeper="tel" data-flash="phone">
+							</div>
+							<div class="form-group">
+								<button type="submit" class="form-control  CKFormTrigger btn arrow FlashFormSubmit"><span>получить выгоду</span>
+								</button>
+							</div>
 						</div>
-						<a class="popup btn red" href="#form_popup"
-						data-title="Узнать подробнее"
-						data-comment=""
-						data-form_name="callback"
-						data-form_type_model_name=""
-						data-form_diler="">
-						<span>Узнать подробнее</span>
-					</a>
+						<label class="agree_field"><input type="checkbox" name="agree" value="1" checked="checked">я согласен с
+							<a target="_blank" href="/policy.php">условиями обработки персональных данных</a>
+						</label>
+					</form>
 				</div>
-				<img src="img/nissan-lending-autumn-1061x450-2.jpg">
 			</div>
 		</div>
+	</div>
+	<!-- /.top-banner -->
 
-		<div class="test-drive">
-			<div class="container">
-				<img src="img/nissan-lending-autumn-850x470.jpg" alt="Тест драйв Nissan">
-				<form id="form5" action="mail.php" method="POST" class="CKiForm" data-callkeeper_name="Выездной тест-драйв"
-				data-flash-title="Выездной тест-драйв">
+	<div class="timer">
+		<div class="container timer_container">
+			<div class="title1">Срок действия акции до:</div>
+			<div class="mtimer">
+				<script src="//megatimer.ru/get/f5d55947236aa3a8b89ea523cdeb9bda.js"></script>
+			</div>
+		</div>
+	</div>
+
+	<div class="cars_wrapper">
+		<div class="container">
+			<ul class="cars_items">
+
+				<li id="nissan_terrano">
+					<div class="image_container">
+						<div class="car_title">
+							<span>Nissan TERRANO</span>
+							<b><font>Спеццена до 27 октября</font></b><br> от 1&nbsp;031&nbsp;000&nbsp;₽<br>
+						</div>
+
+						<a class="popup image" href="#form_popup"	data-title="Узнать цену" data-form_name="callback">
+							<img src="img/avto/nissan_terrano/1.png" alt="Nissan TERRANO">
+						</a>
+
+						<a class="popup btn rassrochka" href="#form_popup"	data-title="Получить сниженную <br>% ставку по кредиту"data-form_name="callback">
+							<i></i><span>Получить сниженную <br>% ставку по кредиту</span>
+						</a>
+					</div>
+
+					<div class="props">
+						<div class="props_price">
+							<a class="popup vigoda" href="#form_popup" data-title="Выгода до 220 000 руб." data-form_name="callback">
+								Выгода до <span>80&nbsp;000&nbsp;₽</span>
+							</a>
+							<a class="popup cred" href="#form_popup" data-title="0 руб. Первый взнос" data-form_name="callback">
+								Выгода по Трейд Ин <span>60&nbsp;000&nbsp;₽</span>
+							</a>
+							<a class="popup cred" href="#form_popup" data-title="0 руб. Первый взнос" data-form_name="callback">
+								Выгода по программе «В&nbsp;кругу&nbsp;Nissan» <span>20&nbsp;000&nbsp;₽</span>
+							</a>
+						</div>
+
+						<div class="btns">
+							<a class="popup btn arrow" href="#form_popup" data-title="Рассчитать кредит" data-form_name="callback">
+								<span>Рассчитать кредит</span>
+							</a>
+							<a class="popup btn arrow red" href="#form_popup" data-title="Узнать цену" data-form_name="callback">
+								<span>Узнать цену</span>
+							</a>
+						</div>
+					</div>
+				</li>
+
+				<li id="nissan_qashqai">
+					<div class="image_container">
+						<div class="car_title">
+							<span>Nissan QASHQAI</span>
+							<b><font>Спеццена до 27 октября</font></b><br> от 1&nbsp;303&nbsp;000&nbsp;₽<br>
+						</div>
+
+						<a class="popup image" href="#form_popup" data-title="Узнать цену" data-form_name="callback">
+							<img src="img/avto/nissan_qashqai/1.png" alt="Nissan QASHQAI">
+						</a>
+						<a class="popup btn rassrochka" href="#form_popup" data-title="Получить сниженную <br>% ставку по кредиту" data-form_name="callback">
+							<i></i><span>Получить сниженную <br>% ставку по кредиту</span>
+						</a>
+					</div>
+
+					<div class="props">
+						<div class="props_price">
+							<a class="popup vigoda" href="#form_popup" data-title="Выгода до 220 000 руб." data-form_name="callback">
+								Выгода до <span>130&nbsp;000&nbsp;₽</span>
+							</a>
+							<a class="popup cred" href="#form_popup" data-title="0 руб. Первый взнос" data-form_name="callback">
+								Выгода по Трейд Ин <span>100&nbsp;000&nbsp;₽</span>
+							</a>
+							<a class="popup cred" href="#form_popup" data-title="0 руб. Первый взнос" data-form_name="callback">
+								Выгода по программе «В&nbsp;кругу&nbsp;Nissan» <span>30&nbsp;000&nbsp;₽</span>
+							</a>
+						</div>
+						<div class="btns">
+							<a class="popup btn arrow" href="#form_popup" data-title="Рассчитать кредит" data-form_name="callback">
+								<span>Рассчитать кредит</span>
+							</a>
+							<a class="popup btn arrow red" href="#form_popup" data-title="Узнать цену" data-form_name="callback">
+								<span>Узнать цену</span>
+							</a>
+						</div>
+					</div>
+				</li>
+
+				<li id="nissan_x_trail">
+					<div class="image_container">
+						<div class="car_title">
+							<span>Nissan XTRAIL</span>
+							<b><font>Спеццена до 27 октября</font></b><br> от 1&nbsp;549&nbsp;000&nbsp;₽<br>
+						</div>
+
+						<a class="popup image" href="#form_popup" data-title="Узнать цену" data-form_name="callback">
+							<img src="img/avto/nissan_x_trail/1.png" alt="Nissan XTRAIL">
+						</a>
+						<a class="popup btn rassrochka" href="#form_popup" data-title="Получить сниженную <br>% ставку по кредиту" data-form_name="callback">
+							<i></i><span>Получить сниженную <br>% ставку по кредиту</span>
+						</a>
+					</div>
+
+					<div class="props">
+						<div class="props_price">
+							<a class="popup vigoda" href="#form_popup" data-title="Выгода до 220 000 руб." data-form_name="callback">
+								Выгода до <span>200&nbsp;000&nbsp;₽</span>
+							</a>
+							<a class="popup cred" href="#form_popup" data-title="0 руб. Первый взнос" data-form_name="callback">
+								Выгода по Трейд Ин <span>170&nbsp;000 руб.</span>
+							</a>
+							<a class="popup cred" href="#form_popup" data-title="0 руб. Первый взнос" data-form_name="callback">
+								Выгода по программе «В&nbsp;кругу&nbsp;Nissan» <span>30&nbsp;000&nbsp;₽</span>
+							</a>
+						</div>
+						<div class="btns">
+							<a class="popup btn arrow" href="#form_popup" data-title="Рассчитать кредит" data-form_name="callback">
+								<span>Рассчитать кредит</span>
+							</a>
+							<a class="popup btn arrow red" href="#form_popup" data-title="Узнать цену" data-form_name="callback">
+								<span>Узнать цену</span>
+							</a>
+						</div>
+					</div>
+				</li>
+
+				<li id="nissan_murano">
+					<div class="image_container">
+						<div class="car_title">
+							<span>Nissan MURANO</span>
+							<b><font>Спеццена до 27 октября</font></b><br> от 2&nbsp;399&nbsp;000&nbsp;₽<br>
+						</div>
+
+						<a class="popup image" href="#form_popup" data-title="Узнать цену" data-form_name="callback">
+							<img src="img/avto/nissan_murano/1.png" alt="Nissan MURANOL">
+						</a>
+						<a class="popup btn rassrochka" href="#form_popup" data-title="Получить сниженную <br>% ставку по кредиту" data-form_name="callback">
+							<i></i><span>Получить сниженную <br>% ставку по кредиту</span>
+						</a>
+					</div>
+
+					<div class="props">
+						<div class="props_price">
+							<a class="popup vigoda" href="#form_popup" data-title="Выгода до 220 000 руб." data-form_name="callback">
+								Выгода до <span>250&nbsp;000&nbsp;₽</span>
+							</a>
+							<a class="popup cred" href="#form_popup" data-title="0 руб. Первый взнос" data-form_name="callback">
+								Выгода по Трейд Ин <span>150&nbsp;000&nbsp;₽</span>
+							</a>
+							<a class="popup cred" href="#form_popup" data-title="0 руб. Первый взнос" data-form_name="callback">
+								Выгода по программе «В&nbsp;₽кругу&nbsp;Nissan» <span>100&nbsp;000&nbsp;₽</span>
+							</a>
+						</div>
+						<div class="btns">
+							<a class="popup btn arrow" href="#form_popup" data-title="Рассчитать кредит" data-form_name="callback">
+								<span>Рассчитать кредит</span>
+							</a>
+							<a class="popup btn arrow red" href="#form_popup" data-title="Узнать цену" data-form_name="callback">
+								<span>Узнать цену</span>
+							</a>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+	<!-- !.cars_wrapper -->
+
+	<div class="container">
+		<div class="fam_car">
+			<div class="fam_content">
+				<div class="fam_text">
+					<span>NISSAN X-Trail</span> автомобиль месяца<br>
+					<small>Дополнительная выгода при приобретении в кредит до конца месяца</small>
+				</div>
+				<a class="popup btn red" href="#form_popup" data-title="Узнать подробнее" data-form_name="callback">
+					<span>Узнать подробнее</span>
+				</a>
+			</div>
+			<img src="img/nissan-lending-autumn-1061x450-2.jpg" alt="NISSAN X-Trail">
+		</div>
+	</div>
+
+	<div class="test-drive">
+		<div class="container">
+
+			<img src="img/nissan-lending-autumn-850x470.jpg" alt="Тест драйв Nissan">
+
+			<form id="form5" action="mail.php" method="POST" class="CKiForm" data-callkeeper_name="Выездной тест-драйв" data-flash-title="Выездной тест-драйв">
 				<input name="title" type="hidden" value="Выездной тест-драйв">
 				<input name="comment" type="hidden" value="">
 				<input name="form_name" type="hidden" value="">
@@ -498,16 +334,18 @@
 						</button>
 					</div>
 				</div>
-				<label class="agree_field"><input type="checkbox" name="agree" value="1" checked="checked">я согласен с <a
-					target="_blank" href="/policy.php">условиями обработки персональных данных</a></label>
-				</form>
-			</div>
-		</div>
+				<label class="agree_field"><input type="checkbox" name="agree" value="1" checked="checked">
+					я согласен с <a target="_blank" href="/policy.php">условиями обработки персональных данных</a>
+				</label>
+			</form>
 
-		<div class="banner">
-			<div class="container">
-				<form id="form2" action="mail.php" method="POST" class="CKiForm" data-callkeeper_name="Остались вопросы?"
-				data-flash-title="Остались вопросы?">
+		</div>
+	</div>
+
+	<div class="banner">
+		<div class="container">
+
+			<form id="form2" action="mail.php" method="POST" class="CKiForm" data-callkeeper_name="Остались вопросы?" data-flash-title="Остались вопросы?">
 				<input name="title" type="hidden" value="Остались вопросы?">
 				<input name="comment" type="hidden" value="">
 				<input name="form_name" type="hidden" value="">
@@ -517,89 +355,88 @@
 				<div class="columns">
 					<div class="form_title">Остались вопросы?</div>
 					<div class="form-group">
-						<div class="comment">
-							<!-- <b>Низкая ставка</b> -->
-							Наши менеджеры<br>
-							готовы на них ответить
-						</div>
+						<div class="comment">Наши менеджеры<br> готовы на них ответить</div>
 					</div>
 					<div class="form-group">
-						<input type="text" name="phone" class="nacc form-control" placeholder="Ваш телефон"
-						data-callkeeper="tel" data-flash="phone">
+						<input type="text" name="phone" class="nacc form-control" placeholder="Ваш телефон"	data-callkeeper="tel" data-flash="phone">
 					</div>
 					<div class="form-group">
-						<button type="submit" class="form-control  CKFormTrigger btn red arrow FlashFormSubmit"><span>Рассчитать кредит</span>
+						<button type="submit" class="form-control  CKFormTrigger btn red arrow FlashFormSubmit">
+							<span>Рассчитать кредит</span>
 						</button>
 					</div>
 				</div>
-				<label class="agree_field"><input type="checkbox" name="agree" value="1" checked="checked">я согласен с <a
-					target="_blank" href="/policy.php">условиями обработки персональных данных</a></label>
-				</form>
-			</div>
-		</div>
+				<label class="agree_field"><input type="checkbox" name="agree" value="1" checked="checked">
+					я согласен с <a target="_blank" href="/policy.php">условиями обработки персональных данных</a>
+				</label>
+			</form>
 
-		<div class="container">
-			<div class="contacts">
-				<div class="title2">Контакты</div>
-				<div class="comment">Самара</div>
-				<div class="bottom_addr">г. Самара, ул. Новоурицкая, 22</div>
-				<div class="bottom_worktime">Пн-сб с 9:00 до 21:00, вс. 9:00 до 19:00</div>
-				<a class="bottom_phone" href="tel:+78469777779">8 (846) 9 77777 9</a>
-				<a class="popup btn arrow" href="#form_popup"
-				data-title="Заказать звонок"
-				data-comment=""
-				data-form_name="callback"
-				data-form_type_model_name=""
-				data-form_diler="">
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="contacts">
+			<div class="title2">Контакты</div>
+			<div class="comment">Самара</div>
+			<div class="bottom_addr">г. Самара, ул. Новоурицкая, 22</div>
+			<div class="bottom_worktime">Пн-сб с 9:00 до 21:00, вс. 9:00 до 19:00</div>
+			<a class="bottom_phone" href="tel:+78469777779">8 (846) 9 77777 9</a>
+			<a class="popup btn arrow" href="#form_popup" data-title="Заказать звонок" data-form_name="callback">
 				<span>Заказать звонок</span>
 			</a>
 		</div>
-		</div>
+	</div>
 
-		<div id="map1">
-			<span class="loader loader-default"></span>
-			<span id="map"></span>
-		</div>
+	<div id="map1">
+		<span class="loader loader-default"></span>
+		<span id="map"></span>
+	</div>
 
+	<footer>
+		<div class="container">
 
-		<footer>
-			<div class="container">
-				<center><a class="disclamer_switch" href="#">Подробные условия акции</a></center>
-				<div class="disclamer" style="display: block;">
-					<p>Данный сайт носит исключительно информационно-справочный характер и ни при каких условиях не является публичной офертой.</p>
-					<p>Предложение действительно с 01.11.2019 по 31.12.2019г.</p>
-					<p>Выгода предоставляется на автомобили Nissan 2019 года выпуска, складывается из снижения цены на отдельные комплектации при участии клиента в Программе утилизации и трейд-ин от Nissan, а также выгоды для клиентов-участников программы «В кругу Nissan» (при сдаче предыдущего автомобиля Nissan по схеме «трейд-ин»). Подробнее по телефонам и в дилерских центрах Ниссан Эксперт Самара.</p>
-					<p>** Маркетинговая ставка не является процентной ставкой по кредиту и отражает размер расходов по уплате процентов на сумму кредита, предоставляемого АО «РН Банк» (лицензия Банка России № 170 от 16.12.2014 г.) для приобретения автомобиля Nissan, достигаемый соразмерным снижением стоимости приобретаемого автомобиля. Предложение не является офертой, действительно для клиентов – участников программы «В кругу Nissan» (подробности программы – на www.nissan.ru/RU/ru/vkrugunissan). Условия и тарифы могут быть изменены в одностороннем порядке. Подробности по телефону и в дилерских центрах Ниссан Эксперт Самара.</p>
-					<p>*** Услуги кредитования по программе Nissan Finance осуществляются АО «РН Банк» (лицензия Банка России № 170 от 16.12.2014 г.).</p>
-					<p>0,1% на 2 года. Услуги кредитования по программе Nissan Finance осуществляются АО «РН Банк» (лицензия Банка России № 170 от 16.12.2014 г.). Действительно для приобретения физлицами автомобилей Nissan Murano HEV (ХЕВ) 2018 и 2019 г.в. и рассчитано из следующих условий: аванс от 70% цены автомобиля; сумма кредита: от 100 000 руб; валюта - рубль РФ; срок кредита: 2 года; процентная ставка: 0,1% годовых; возврат кредита - ежемесячные (аннуитетные) платежи; обеспечение возврата кредита – залог приобретаемого автомобиля; оплата страховых премий в кредит: по договору страхования от Н/С и болезней с ООО «СК КАРДИФ» (лицензии ЦБ РФ CИ № 4104 и СЛ № 4104, выданы 18.07.2018) и договору страхования КАСКО по любой программе «Ниссан Страхование» сроком на 1 год. Не является публичной офертой. Услуги кредитования по программе Nissan Finance осуществляются АО «РН Банк» (лицензия Банка России № 170 от 16.12.2014 г.). Действительно для приобретения физлицами автомобилей Nissan X-Trail в комплектациях 2.5 LE+, LE Top (Эл Е+, Эл Е Топ) 2018 и 2019 г.в. и рассчитано из следующих условий: аванс от 70% цены автомобиля; сумма кредита: от 100 000 руб; валюта - рубль РФ; срок кредита: 2 года; процентная ставка: 0,1% годовых; возврат кредита – ежемесячные (аннуитетные) платежи; обеспечение возврата кредита – залог приобретаемого автомобиля; оплата страховых премий в кредит: по договору страхования от Н/С и болезней с ООО «СК КАРДИФ» (лицензии ЦБ РФ CИ № 4104 и СЛ № 4104, выданы 18.07.2018) и договору страхования КАСКО по любой программе «Ниссан Страхование» сроком на 1 год. Не является публичной офертой.</p>
-					<p>3% на 3 года. Услуги кредитования по программе Nissan Finance осуществляются АО «РН Банк» (лицензия Банка России № 170 от 16.12.2014 г.). Действительно для приобретения физлицами автомобиля Nissan Qashqai 2018 и 2019 г.в. и рассчитано из следующих условий: аванс от 70% цены автомобиля; сумма кредита: от 100 000 руб; валюта - рубль РФ; срок кредита: 3 года; процентная ставка: 3% годовых; возврат кредита - ежемесячные (аннуитетные) платежи; обеспечение возврата кредита – залог приобретаемого автомобиля; оплата страховых премий в кредит: по договору страхования от Н/С и болезней с ООО «СК КАРДИФ» (лицензии ЦБ РФ CИ № 4104 и СЛ № 4104, выданы 18.07.2018) и договору страхования КАСКО по любой программе «Ниссан Страхование» сроком на 1 год. Действительно для клиентов – участников программы «В кругу Nissan». Не является публичной офертой. Услуги кредитования по программе Nissan Finance осуществляются АО «РН Банк» (лицензия Банка России № 170 от 16.12.2014 г.). Действительно для приобретения физлицами автомобиля Nissan Terrano 2018 и 2019 г.в. и рассчитано из следующих условий: аванс от 70% цены автомобиля; сумма кредита: от 100 000 руб; валюта - рубль РФ; срок кредита: 3 года; процентная ставка: 3% годовых; возврат кредита - ежемесячные (аннуитетные) платежи; обеспечение возврата кредита – залог приобретаемого автомобиля; оплата страховых премий в кредит: по договору страхования от Н/С и болезней с ООО «СК КАРДИФ» (лицензии ЦБ РФ CИ № 4104 и СЛ № 4104, выданы 18.07.2018) и договору страхования КАСКО по любой программе «Ниссан Страхование» сроком на 1 год. Действительно для клиентов – участников программы «В кругу Nissan» Не является публичной офертой.</p>
-					<p>**** Программа «Простые правила» Nissan Finance. Вносите минимальный первоначальный взнос в размере 20% и уезжаете на вашем новом автомобиле Ниссан. В течение 36 месяцев вы погашаете сниженные ежемесячные платежи. После этого вы вносите фиксированный остаточный платеж в размере 40% или выбираете другой вариант: обмен по трейд-ин, продажу автомобиля в счет погашения кредита или пролонгацию кредита еще на 2 года. При равных процентных ставках и сроках преимущество программы «Простые правила» перед классическим кредитом в том, что ежемесячные платежи в среднем в 2 раза ниже, а свобода действий клиента – выше, чем при стандартных кредитных предложениях. В программе участвуют модели NISSAN TERRANO, JUKE, QASHQAI, X-TRAIL, MURANO. Подробнее по телефонам и в дилерских центрах Ниссан Эксперт Самара.</p>
-				</div>
-			</div>
-		</footer>
-		<div id="form_popup">
-			<form action="mail.php" method="POST" class="CKiForm popup_container" data-callkeeper_name="" data-flash-title="">
-				<input name="title" type="hidden" value="">
-				<input name="comment" type="hidden" value="">
-				<input name="form_name" type="hidden" value="">
-				<input name="form_type_model_name" type="hidden" value="">
-				<input name="form_diler" type="hidden" value="">
-
-				<h2 class="form_title">Заголовок</h2>
-				<div class="form-group">
-					<input type="text" name="phone" class="nacc form-control" placeholder="Ваш телефон" data-callkeeper="tel"
-					data-flash="phone">
-				</div>
-				<div class="form-group">
-					<button type="submit" class="form-control  CKFormTrigger btn red arrow FlashFormSubmit"><span>Получить выгоду</span>
-					</button>
-				</div>
-				<label class="agree_field"><input type="checkbox" name="agree" value="1" checked="checked">я согласен с <a
-					target="_blank" href="/policy.php">условиями обработки персональных данных</a></label>
-				</form>
+			<center><a class="disclamer_switch" href="#">Подробные условия акции</a></center>
+			<div class="disclamer" style="display: block;">
+				<p>Данный сайт носит исключительно информационно-справочный характер и ни при каких условиях не является публичной офертой.</p>
+				<p>Предложение действительно с 01.11.2019 по 31.12.2019г.</p>
+				<p>Выгода предоставляется на автомобили Nissan 2019 года выпуска, складывается из снижения цены на отдельные комплектации при участии клиента в Программе утилизации и трейд-ин от Nissan, а также выгоды для клиентов-участников программы «В кругу Nissan» (при сдаче предыдущего автомобиля Nissan по схеме «трейд-ин»). Подробнее по телефонам и в дилерских центрах Ниссан Эксперт Самара.</p>
+				<p>** Маркетинговая ставка не является процентной ставкой по кредиту и отражает размер расходов по уплате процентов на сумму кредита, предоставляемого АО «РН Банк» (лицензия Банка России № 170 от 16.12.2014 г.) для приобретения автомобиля Nissan, достигаемый соразмерным снижением стоимости приобретаемого автомобиля. Предложение не является офертой, действительно для клиентов – участников программы «В кругу Nissan» (подробности программы – на www.nissan.ru/RU/ru/vkrugunissan). Условия и тарифы могут быть изменены в одностороннем порядке. Подробности по телефону и в дилерских центрах Ниссан Эксперт Самара.</p>
+				<p>*** Услуги кредитования по программе Nissan Finance осуществляются АО «РН Банк» (лицензия Банка России № 170 от 16.12.2014 г.).</p>
+				<p>0,1% на 2 года. Услуги кредитования по программе Nissan Finance осуществляются АО «РН Банк» (лицензия Банка России № 170 от 16.12.2014 г.). Действительно для приобретения физлицами автомобилей Nissan Murano HEV (ХЕВ) 2018 и 2019 г.в. и рассчитано из следующих условий: аванс от 70% цены автомобиля; сумма кредита: от 100 000 руб; валюта - рубль РФ; срок кредита: 2 года; процентная ставка: 0,1% годовых; возврат кредита - ежемесячные (аннуитетные) платежи; обеспечение возврата кредита – залог приобретаемого автомобиля; оплата страховых премий в кредит: по договору страхования от Н/С и болезней с ООО «СК КАРДИФ» (лицензии ЦБ РФ CИ № 4104 и СЛ № 4104, выданы 18.07.2018) и договору страхования КАСКО по любой программе «Ниссан Страхование» сроком на 1 год. Не является публичной офертой. Услуги кредитования по программе Nissan Finance осуществляются АО «РН Банк» (лицензия Банка России № 170 от 16.12.2014 г.). Действительно для приобретения физлицами автомобилей Nissan X-Trail в комплектациях 2.5 LE+, LE Top (Эл Е+, Эл Е Топ) 2018 и 2019 г.в. и рассчитано из следующих условий: аванс от 70% цены автомобиля; сумма кредита: от 100 000 руб; валюта - рубль РФ; срок кредита: 2 года; процентная ставка: 0,1% годовых; возврат кредита – ежемесячные (аннуитетные) платежи; обеспечение возврата кредита – залог приобретаемого автомобиля; оплата страховых премий в кредит: по договору страхования от Н/С и болезней с ООО «СК КАРДИФ» (лицензии ЦБ РФ CИ № 4104 и СЛ № 4104, выданы 18.07.2018) и договору страхования КАСКО по любой программе «Ниссан Страхование» сроком на 1 год. Не является публичной офертой.</p>
+				<p>3% на 3 года. Услуги кредитования по программе Nissan Finance осуществляются АО «РН Банк» (лицензия Банка России № 170 от 16.12.2014 г.). Действительно для приобретения физлицами автомобиля Nissan Qashqai 2018 и 2019 г.в. и рассчитано из следующих условий: аванс от 70% цены автомобиля; сумма кредита: от 100 000 руб; валюта - рубль РФ; срок кредита: 3 года; процентная ставка: 3% годовых; возврат кредита - ежемесячные (аннуитетные) платежи; обеспечение возврата кредита – залог приобретаемого автомобиля; оплата страховых премий в кредит: по договору страхования от Н/С и болезней с ООО «СК КАРДИФ» (лицензии ЦБ РФ CИ № 4104 и СЛ № 4104, выданы 18.07.2018) и договору страхования КАСКО по любой программе «Ниссан Страхование» сроком на 1 год. Действительно для клиентов – участников программы «В кругу Nissan». Не является публичной офертой. Услуги кредитования по программе Nissan Finance осуществляются АО «РН Банк» (лицензия Банка России № 170 от 16.12.2014 г.). Действительно для приобретения физлицами автомобиля Nissan Terrano 2018 и 2019 г.в. и рассчитано из следующих условий: аванс от 70% цены автомобиля; сумма кредита: от 100 000 руб; валюта - рубль РФ; срок кредита: 3 года; процентная ставка: 3% годовых; возврат кредита - ежемесячные (аннуитетные) платежи; обеспечение возврата кредита – залог приобретаемого автомобиля; оплата страховых премий в кредит: по договору страхования от Н/С и болезней с ООО «СК КАРДИФ» (лицензии ЦБ РФ CИ № 4104 и СЛ № 4104, выданы 18.07.2018) и договору страхования КАСКО по любой программе «Ниссан Страхование» сроком на 1 год. Действительно для клиентов – участников программы «В кругу Nissan» Не является публичной офертой.</p>
+				<p>**** Программа «Простые правила» Nissan Finance. Вносите минимальный первоначальный взнос в размере 20% и уезжаете на вашем новом автомобиле Ниссан. В течение 36 месяцев вы погашаете сниженные ежемесячные платежи. После этого вы вносите фиксированный остаточный платеж в размере 40% или выбираете другой вариант: обмен по трейд-ин, продажу автомобиля в счет погашения кредита или пролонгацию кредита еще на 2 года. При равных процентных ставках и сроках преимущество программы «Простые правила» перед классическим кредитом в том, что ежемесячные платежи в среднем в 2 раза ниже, а свобода действий клиента – выше, чем при стандартных кредитных предложениях. В программе участвуют модели NISSAN TERRANO, JUKE, QASHQAI, X-TRAIL, MURANO. Подробнее по телефонам и в дилерских центрах Ниссан Эксперт Самара.</p>
 			</div>
 
-			<script src="js/scripts.min.js?261020202005"></script>
+		</div>
+	</footer>
+
+	<div id="form_popup">
+
+		<form action="mail.php" method="POST" class="CKiForm popup_container" data-callkeeper_name="" data-flash-title="">
+			<input name="title" type="hidden" value="">
+			<input name="comment" type="hidden" value="">
+			<input name="form_name" type="hidden" value="">
+			<input name="form_type_model_name" type="hidden" value="">
+			<input name="form_diler" type="hidden" value="">
+
+			<h2 class="form_title">Заголовок</h2>
+			<div class="form-group">
+				<input type="text" name="phone" class="nacc form-control" placeholder="Ваш телефон" data-callkeeper="tel"
+				data-flash="phone">
+			</div>
+			<div class="form-group">
+				<button type="submit" class="form-control  CKFormTrigger btn red arrow FlashFormSubmit"><span>Получить выгоду</span>
+				</button>
+			</div>
+			<label class="agree_field"><input type="checkbox" name="agree" value="1" checked="checked">
+				я согласен с <a target="_blank" href="/policy.php">условиями обработки персональных данных</a>
+			</label>
+		</form>
+
+	</div>
+
+	<script src="js/scripts.min.js?261020202005"></script>
 
 	</body>
+	
 </html>
