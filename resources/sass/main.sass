@@ -1527,21 +1527,29 @@ header .btn
 .fam_car
   position: relative
   width: 100%
+  margin-bottom: 80px
+  small
+   font-size: 16px
+   font-weight: 300
+   display: block
+   margin-top: 10px
 
   img
-    position: absolute
-    right: 0
-    top: 0
-    z-index: 0
+    max-width: 90%
+    width: 100%
+    height: auto
+    margin-left: auto
+    display: block
 
 .fam_content
-  padding: 55px 30px
+  padding: 40px 30px
   background: #f4f3f3
-  position: relative
-  top: 80px
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
   z-index: 1
-  width: 27%
-  margin-bottom: 145px
+  max-width: 500px
+  width: 100%
 
 .fam_text
   color: $blue
@@ -1552,7 +1560,7 @@ header .btn
   text-transform: uppercase
 
   span
-    font-size: 48px
+    font-size: 40px
     color: #aa182d
     display: block
     margin-top: 5px
@@ -1574,36 +1582,39 @@ header .btn
     padding-bottom: 12px
 
 .test-drive
-  background: url(../img/nissan-lending-autumn-850x470.jpg) top right no-repeat
-  padding: 20px 0
+   position: relative
+   margin-bottom: 80px
+   img
+      width: 90%
+      height: auto
+      margin-right: auto
 
 #form5
-  border-right: 6px solid $red
-  background: rgba(235, 235, 235, 0.7)
+  border-left: 6px solid $red
+  background: rgba(235, 235, 235, 0.8)
   padding: 40px 45px
-  width: 55%
-
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  right: 0
   .form_title
     font-family: $default-font
-    text-align: left
     color: black
     font-size: 28px
     padding-bottom: 40px
     font-weight: 700
-
+    text-align: left
   .comment
     font-family: $default-font
-    text-align: left
     color: black
     font-size: 20px
     padding-bottom: 40px
     font-weight: 300
-
   .form-group
-    width: 50%
-
+    width: 100%
   button
     height: 47px
+    margin-bottom: 20px
 
 .dist_work
   background: rgba(235, 235, 235, 0.7)
@@ -2971,6 +2982,10 @@ footer .disclamer
     padding-bottom: 150px
 
 // DIY MEDIA 
+
+@media (min-width: 1600px)
+   .title1_container
+      max-height: 900px
 
 @media (max-width: 1200px)
    .cars_items>li .image_container
