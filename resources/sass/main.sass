@@ -880,13 +880,14 @@ header .btn
     opacity: 0.25
 
 .top-banner
+  overflow-x: hidden
   background: url(../img/nissan-lending-main-autumn.jpg)
   background-size: cover
   background-position: center
   background-repeat: no-repeat
   width: 100%
   &__title
-    padding-top: 90px
+    padding-top: 130px
 .title1_container
   min-height: 700px
   height: 100vh
@@ -904,7 +905,7 @@ header .btn
     padding-top: 14px
     padding-left: 18px
     padding-bottom: 12px
-    max-width: 550px
+    max-width: 740px
     text-align: left
     width: 100%
     box-sizing: border-box
@@ -985,6 +986,7 @@ header .btn
 .title1_container .title1
   span
     color: #0c3d52
+    font-size: 32px
 
   b
     color: $red
@@ -2018,6 +2020,8 @@ footer .disclamer
 
 //IPAD PRO BEGIN
 @media (min-width: 768px) and (max-width: 1199px)
+  .top-banner__title
+    padding-top: 100px
   .title1_container
     .title1
       margin-top: 10px
@@ -2040,13 +2044,11 @@ footer .disclamer
     width: 830px
     transform: scale(0.9)
     transform-origin: left top
-
+  
   .title1_container
     .title1
-      font-size: 30px
-
       span
-        font-size: 35px
+        font-size: 30px
 
     .title_comment
       font-size: 38px
@@ -2099,6 +2101,9 @@ footer .disclamer
 @media (min-width: 768px) and (max-width: 991px)
   .top-banner
     background: url(../img/nissan-lending-main-autumn-mobile.jpg)
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
   .title1_container
     height: auto
     justify-content: flex-start
@@ -2142,16 +2147,11 @@ footer .disclamer
     max-width: 100px
 
   .title1_container .title1
-    width: 63%
-
-// .title1_container .title1:after 
-//     display: none
+    font-size: 36px
 
   .timer_container
-    // text-align: center;
-
     .title1
-      font-size: 40px
+      font-size: 34px
       text-transform: uppercase
       width: 35%
 
@@ -2440,10 +2440,6 @@ footer .disclamer
   .popup_container
     width: 100%
 
-  body
-    background-position: 85% 175px
-    background-size: 170%
-
   .resp_table tr
     display: block
     padding-bottom: 20px
@@ -2553,7 +2549,9 @@ footer .disclamer
 
   .title1_container
     margin-bottom: 0
+    min-height: 0
     height: auto
+    justify-content: flex-start
   .advantages>li a
     padding-bottom: 15px
     padding-top: 50px
@@ -2561,14 +2559,6 @@ footer .disclamer
     .title1
       font-size: 28px
       margin-top: 0
-
-      span
-        font-size: 22px
-        br
-          display: none
-
-      &:after
-
     .btn
       width: 100%
   
@@ -2580,7 +2570,9 @@ footer .disclamer
         display: none
   .title1_container .title1
     padding-right: 18px
-    font-size: 34px
+    font-size: 26px
+    span
+      font-size: 22px
   .title1_container .btn
     width: 100%
   .advantages_container
@@ -2922,7 +2914,7 @@ footer .disclamer
   .title1_container
     .title1
       padding-left: 10px
-      font-size: 19px
+      font-size: 25px
 
     .title2 .title2_text
       margin-top: 260px
@@ -2956,7 +2948,7 @@ footer .disclamer
       font-size: 22px
 
   .title1_container .title1 span
-    font-size: 20px
+    font-size: 22px
 
   #form2 .comment
     padding-bottom: 120px
