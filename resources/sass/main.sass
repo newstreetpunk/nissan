@@ -368,7 +368,7 @@ input[type=text]
 .popup_container
   width: 420px
   max-width: 100%
-  padding: 5px 29px
+  padding: 5px 29px 30px
   overflow: hidden
   position: relative
   box-sizing: border-box
@@ -472,7 +472,6 @@ input[type=text]
   position: relative
   display: inline-block
   padding-left: 20px
-  top: -9px
 
   input
     position: absolute
@@ -902,10 +901,8 @@ header .btn
     text-transform: uppercase
     position: relative
     line-height: 1.3
-    padding-top: 14px
-    padding-left: 18px
-    padding-bottom: 12px
-    max-width: 740px
+    padding: 14px 14px 14px 18px 
+    max-width: 760px
     text-align: left
     width: 100%
     box-sizing: border-box
@@ -917,15 +914,6 @@ header .btn
       b
         color: $red
         font-weight: 500
-    &:after
-      content: ''
-      display: block
-      position: absolute
-      background: url(../img/corner1.png) no-repeat
-      height: 100%
-      right: -94px
-      top: 0
-      width: 94px
   .title2
     position: absolute
     top: 0px
@@ -1535,15 +1523,14 @@ header .btn
    margin-top: 10px
 
   img
-    max-width: 90%
-    width: 100%
+    width: 90%
     height: auto
     margin-left: auto
     display: block
 
 .fam_content
   padding: 40px 30px
-  background: #f4f3f3
+  background: rgba(#f4f3f3, .8)
   position: absolute
   top: 50%
   transform: translateY(-50%)
@@ -1592,7 +1579,7 @@ header .btn
 #form5
   border-left: 6px solid $red
   background: rgba(235, 235, 235, 0.8)
-  padding: 40px 45px
+  padding: 20px
   position: absolute
   top: 50%
   transform: translateY(-50%)
@@ -1658,10 +1645,27 @@ header .btn
     background: url(../img/arrow.png) 100% 50% no-repeat
 
 .banner
-  background: url(../img/nissan-lending-autumn-1920x502.jpg) 50% 0px no-repeat
-  height: 463px
-  padding-bottom: 39px
-
+  background: url(../img/nissan-lending-autumn-1920x502.jpg)
+  background-size: cover
+  background-position: center
+  height: 500px
+  padding-bottom: 40px
+  display: flex
+  align-items: flex-end
+  position: relative
+  z-index: 1
+  &:before
+   content: ''
+   display: block
+   position: absolute
+   top: 0
+   right: 0
+   bottom: 0
+   left: 0
+   background-color: rgba($blue, .3)
+   z-index: -1
+  #form2 input[type=text]
+   background: rgba(#fff, .8)
 #form2
   box-sizing: border-box
   max-width: 100%
@@ -1671,7 +1675,6 @@ header .btn
   z-index: 1
   text-align: center
   margin-right: 15px
-  padding-top: 300px
 
   .form_title
     font-size: 50px
@@ -1698,8 +1701,6 @@ header .btn
     display: flex
     flex-wrap: wrap
     align-items: flex-end
-
-    .column
 
   .comment
     font-family: $default-font
@@ -1854,6 +1855,9 @@ header .btn
     a
       color: $blue
 
+.contacts-block
+   position: relative
+
 .contacts
   position: absolute
   z-index: 9
@@ -1903,7 +1907,7 @@ header .btn
 footer
   padding-top: 20px
   padding-bottom: 20px
-  background: whtie
+  background: white
 
 .disclamer_switch
   text-align: center
@@ -2020,16 +2024,6 @@ footer .disclamer
     opacity: 1
 
 
-// 
-
-@media (max-width: 1700px)
-  #form5
-    width: 48%
-
-@media (max-width: 1500px)
-  #form5
-    width: 36%
-
 //IPAD PRO BEGIN
 @media (min-width: 768px) and (max-width: 1199px)
   .top-banner__title
@@ -2052,10 +2046,13 @@ footer .disclamer
   .colors_items
     flex-wrap: wrap
 
+  .timer_container
+    flex-direction: column
+    justify-content: center
   .timer_container .mtimer
-    width: 830px
+    width: 100%
     transform: scale(0.9)
-    transform-origin: left top
+    transform-origin: center
   
   .title1_container
     .title1
@@ -2074,12 +2071,6 @@ footer .disclamer
 
     strong
       font-size: 18px
-
-  .test-drive
-    background-position: 200% 0
-
-  #form5
-    width: 45%
 
   .dist_work_block
     background-size: 53%
@@ -2103,9 +2094,6 @@ footer .disclamer
 
   .fam_text
     font-size: 24px
-
-  .fam_car img
-    object-position: 115px 0
 
 //IPAD PRO BEGIN
 
@@ -2165,7 +2153,9 @@ footer .disclamer
     .title1
       font-size: 34px
       text-transform: uppercase
-      width: 35%
+      width: 100%
+      text-align: center
+      margin-bottom: 20px
 
   .title1_container .title2 .title2_text
     width: 333px
@@ -2365,7 +2355,7 @@ footer .disclamer
     line-height: 160%
 
     span
-      margin-top: 15px
+      margin-top: 0
 
   .cars_items > li
     .car_title br:last-child
@@ -2472,9 +2462,6 @@ footer .disclamer
         font-weight: 700
         vertical-align: top
         display: none
-
-  .timer
-    margin-top: 30px
 
   .timer_container
     flex-direction: column
@@ -2733,11 +2720,6 @@ footer .disclamer
     margin-bottom: 0px
     padding-bottom: 0px
 
-  .banner
-    height: auto
-    background-size: 160%
-    background-position: 50% 141px
-
   #form2
     margin: 0px
     padding-top: 30px
@@ -2745,20 +2727,6 @@ footer .disclamer
     .form_title
       width: 100%
       font-size: 32px
-      color: $blue
-
-      span
-
-    .columns
-      display: block
-
-      .column
-
-    .comment
-      color: $blue
-      padding-bottom: 154px
-
-    .form_comment span
 
     .form-group
       width: 100%
@@ -2771,10 +2739,6 @@ footer .disclamer
 
     button
       margin-top: 0px
-
-    .agree_field
-      color: $blue
-
       a
         color: $blue
 
@@ -2853,29 +2817,17 @@ footer .disclamer
     padding: 0px
     text-align: left
     padding-bottom: 15px
-
-    .title2, .comment, .bottom_addr, .bottom_worktime, .bottom_phone
-
     .btn
       position: relative
       bottom: auto
       right: auto
-      width: 100%
       margin-top: 15px
-
-  footer
-    display: none
-
-  .disclamer_switch, .disclamer, footer .disclamer, #map1
 
 //MOBILE END
 
 //Portrait phones and smaller
 @media (max-width: 576px)
   .banner
-    background: url(../img/banner_mob.jpg) 50% 0px no-repeat
-    background-size: 110%
-    background-position: 40% 144px
   .top-banner__title
     padding-top: 70px
   .top_phone
@@ -2904,10 +2856,6 @@ footer .disclamer
 @media (max-width: 390px)
   .title1_container .title1
     font-size: 20px
-
-  #form2 .comment
-    color: $blue
-    padding-bottom: 143px
 
 @media (max-width: 375px)
   .title1_container
@@ -2957,17 +2905,14 @@ footer .disclamer
       height: 75px
 
     .title1
-      font-size: 22px
+      font-size: 20px
 
   .title1_container .title1 span
     font-size: 22px
 
   #form2 .comment
-    padding-bottom: 120px
-    font-size: 26px
-
-  .banner
-    background-position: 60% 135px
+    font-size: 18px
+    margin-bottom: 15px
 
   #form5 .form_title
     font-size: 24px
@@ -3022,6 +2967,53 @@ footer .disclamer
    .cars_items>li .props_price .cred, .cars_items>li .props_price a
       margin-left: 20px
       margin-right: 20px
+   .fam_content
+      position: relative
+      top: 0
+      transform: translateY(0)
+      max-width: 100%
+      order: 2
+   .fam_car
+      display: flex
+      flex-direction: column
+      img
+         width: 100%
+         margin: 0
+         order: 1
+   .test-drive img
+      width: 100%
+      margin: 0
+   #form5
+      position: relative
+      top: 0
+      transform: translateY(0)
+      border-left: 0
+      .form_title, .comment
+         text-align: center
+         br
+            display: none
+      .form_title
+         padding-bottom: 15px
+   .banner
+      .columns 
+         div
+            &:nth-child(2)
+               width: 100% !important
+               br
+                  display: none
+            &:nth-child(3), &:nth-child(4)
+               width: 48% !important
+               margin-bottom: 10px !important
+   .contacts
+      position: relative
+      top: 0
+      padding: 30px 0
+      width: 100%
+      .btn
+         position: relative
+         bottom: 0
+         right: 0
+         margin-top: 15px
 
 @media (max-width: 768px)
    .cars_items>li .image_container img
@@ -3044,6 +3036,18 @@ footer .disclamer
    .cars_items>li .car_title
       text-align: center
       margin-bottom: 20px
+   .fam_car
+      margin-bottom: 0
+      small
+         line-height: 1.45
+   #form5
+      padding-top: 30px
+   .test-drive
+      margin-bottom: 30px
+   .banner
+      height: 60vw
+      align-items: center
+      padding-bottom: 20px
 
 @media (max-width: 576px)
    .cars_items>li .car_title
@@ -3053,5 +3057,30 @@ footer .disclamer
       margin-left: 0
    .cars_items>li .btns .btn
       width: 100%
+   #form2 .form_title
+      margin-bottom: 10px
+   #form2 .comment
+      font-size: 20px
+      margin-bottom: 15px
 
-   
+@media (max-width: 480px)
+   .banner
+      min-height: 300px
+      height: auto
+   .banner .columns div:nth-child(3), .banner .columns div:nth-child(4)
+      width: 100% !important
+   #form2 .form_title
+      font-size: 24px
+      margin-bottom: 15px
+   #form2 .comment
+      font-size: 18px
+   .fam_text
+      font-size: 18px
+      span
+         font-size: 30px
+   #form5 .form_title
+      font-size: 20px
+   #form5 .comment
+      font-size: 14px
+   .contacts .title2
+      font-size: 40px
