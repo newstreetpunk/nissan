@@ -49,22 +49,19 @@ function initFancy()
 
 //	$(".popup").click( function()
 	$(document).on("click",".popup",function(){
-		var _form_id = $(this).attr('href');
+		var form_id = $(this).attr('href');
 
-		var _form_title = $(this).data('title');
-		var _form_comment = $(this).data('comment');
-		var _form_name = $(this).data('form_name');
-		var _form_type_model_name = $(this).data('form_type_model_name');
-		var _form_diler = $(this).data('form_diler');
-		
-		var _select_val = $(this).attr('_select_val');
+		var title = $(this).data('title');
+		var subject = $(this).data('subject');
+		var form_name = $(this).data('form');
+		var btn_text = $(this).data('btn');
 
-		$(".popup_container .form_title").html(_form_title);
+		$(".popup_container .form_title").html(title);
 
-		$.fancybox.open( $(_form_id).html(),
+		$.fancybox.open( $(form_id).html(),
 		{
 			padding: 0,
-			content: $(_form_id).html(),
+			content: $(form_id).html(),
 		//	modal: true,
 			scrolling: "no",
 			margin: 5,
@@ -73,21 +70,11 @@ function initFancy()
 			{
 			
 			
-				$(".popup_container input[name='title']").val(_form_title);
-				$(".popup_container input[name='comment']").val(_form_comment);
-				$(".popup_container input[name='form_name']").val(_form_name);
-				$(".popup_container input[name='form_type_model_name']").val(_form_type_model_name);
-				$(".popup_container input[name='form_diler']").val(_form_diler);
-				$(".popup_container").attr("data-callkeeper_name",_form_title);
-				$(".popup_container").attr('data-flash-title',_form_title);
-
-
+				$(".popup_container input[name='subject']").val(subject);
+				$(".popup_container input[name='Форма']").val(form_name);			
+				$(".popup_container button span").text(btn_text);			
 			
-			
-				$("input[name=phone]").inputmask("+7(999) 999-99-99");
-				if ( typeof(_select_val)!="undefined" ) $('.popup_container select').val( _select_val );
-				
-				
+				$("input[name=Телефон]").inputmask("+7(999) 999-99-99");			
 				
 			}
 		} );
@@ -99,7 +86,7 @@ function initFancy()
 function initForm()
 {
 
-	$("input[name=phone]").inputmask("+7(999) 999-99-99");
+	$("input[name=Телефон]").inputmask("+7(999) 999-99-99");
 
 	$( "body" ).on( "submit", "form", function()
 	{
@@ -138,7 +125,7 @@ function initForm()
 
 		var l_hash = "8cfeaf5c6baa746972dc720c3ac80214";
 		var l_host = "http://suzuki-samara.ru/";
-		var l_phone = $(this).find("input[name=phone]").val();
+		var l_phone = $(this).find("input[name=Телефон]").val();
 
 		if ( ("-="+l_phone).indexOf("_")>0 )
 		{
