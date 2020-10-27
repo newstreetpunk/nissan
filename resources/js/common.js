@@ -407,21 +407,55 @@ $( function() {
 		return false;
 	});
 
-	$('.cars_items .colors_items li a').click(function () {
-		var _colors_items = $(this).closest(".colors_items");
-		var _li = $(this).closest("li");
-		$("li", _colors_items).removeClass("current");
-		var _parent = $(_colors_items).closest("li");
-		var _model = $(_parent).attr("id");
-		var _index = $('li a', _colors_items).index(this) + 1;
-		// $('.image img ', _parent).attr("src", "./img/colors/" + _model + "/" + _index + ".png");
-		$('.image img ', _parent).attr("src", "img/colors/" + _model + "/" + _index + ".png");
+	// ТАЙМЕР
 
-		$(_li).addClass("current");
-		return false;
+	$('#Dtimer').eTimer({
+		etType: 1, 
+		etDate: "28.10.2020.0.0",
+		etTitleText: "", 
+		etTitleSize: 10, 
+		etShowSign: 1, 
+		etSep: ":", 
+		etFontFamily: "inherit", 
+		etTextColor: "black", 
+		etPaddingTB: 0, 
+		etPaddingLR: 0, 
+		etBackground: "transparent", 
+		etBorderSize: 0, 
+		etBorderRadius: 0, 
+		etBorderColor: "transparent", 
+		etShadow: "inset 0px 0px 0px 0px transparent", 
+		etLastUnit: 4, 
+		etNumberFontFamily: "inherit", 
+		etNumberSize: 59, 
+		etNumberColor: "black", 
+		etNumberPaddingTB: 0, 
+		etNumberPaddingLR: 0, 
+		etNumberBackground: "inherit", 
+		etNumberBorderSize: 0, 
+		etNumberBorderRadius: 0, 
+		etNumberBorderColor: "transparent", 
+		etNumberShadow: "inset 0px 0px 0px 0px transparent"
 	});
-	$('.cars_items > li').each(function () {
-		$('.colors_items li:first a', this).click();
+
+	function echo_date(date) {
+		var months = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+		echo_date = function(date) {
+			date = new Date(date);
+			return {
+				"date": date,
+				"month": months[date.getMonth()],
+				"day_num": date.getDate()
+			};
+		}
+		return echo_date(date);
+	};
+	var myDate = echo_date(Date.now() + 120 * 60 * 60 * 1000);
+
+	// ВЫвод даты +5 дней
+	$('.cars_items li').each(function(){
+		$(this).find('#myDate').html(myDate.day_num);
+		$(this).find('#myMonth').html(myDate.month);
 	});
 
 });
