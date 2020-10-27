@@ -302,7 +302,7 @@
 
 			<img src="img/nissan-lending-autumn-850x470.jpg" alt="Тест драйв Nissan">
 
-			<form id="form5" action="mail.php" method="POST" class="CKiForm" data-callkeeper_name="Выездной тест-драйв" data-flash-title="Выездной тест-драйв">
+			<form id="form5" class="CKiForm">
 				<input name="subject" type="hidden" value="Запись на выездной тест-драйв">
 				<input name="Форма" type="hidden" value="Выездной тест-драйв">
 
@@ -330,7 +330,7 @@
 	<div class="banner">
 		<div class="container">
 
-			<form id="form2" action="mail.php" method="POST" class="CKiForm" data-callkeeper_name="Остались вопросы?" data-flash-title="Остались вопросы?">
+			<form id="form2" method="POST" class="CKiForm" data-callkeeper_name="Остались вопросы?" data-flash-title="Остались вопросы?">
 				<input name="subject" type="hidden" value="Остались вопросы?">
 				<input name="Форма" type="hidden" value="Остались вопросы?">
 
@@ -405,13 +405,14 @@
 				<input type="text" name="Телефон" class="nacc form-control" placeholder="Ваш телефон" required>
 			</div>
 			<div class="form-group">
-				<button type="submit" class="form-control  CKFormTrigger btn red arrow FlashFormSubmit"><span>Получить выгоду</span>
+				<button type="submit" class="form-control  CKFormTrigger btn red arrow FlashFormSubmit">
+					<span>Получить выгоду</span>
 				</button>
 			</div>
 			<label class="agree_field"><input type="checkbox" name="agree" value="1" checked="checked">
 				я согласен с <a target="_blank" href="/policy.php">условиями обработки персональных данных</a>
 			</label>
-		</form>
+		</form>		
 
 	</div>
 

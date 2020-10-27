@@ -60,6 +60,7 @@ projects.promo_nissan = {
 			basename + '/resources/libs/jquery.inputmask.bundle.min.js',
 			basename + '/resources/libs/aos/aos.js',
 			basename + '/resources/libs/timer/timer.js',
+			basename + '/resources/libs/sweetalert.min.js',
 			basename + '/resources/js/map.js',
 			basename + '/resources/js/common.js',
 		],

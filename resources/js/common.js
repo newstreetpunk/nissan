@@ -1,53 +1,5 @@
-function init_row_toggle()
-{
-	$(".row_toggle").click(function(){
-		if ($(".row_toggle_container:animated").length == 0)
-		{
-			if ($(this).hasClass("open"))
-			{
-				$(this).removeClass("open");
-				$(this).next(".row_toggle_container").slideUp();
-			//	$(this).next(".row_toggle_container").hide();
-			}
-			else
-			{
-				var _parent = $(this).closest('.only_one');
-				if (_parent.length > 0)
-				{
-					
-					$('.row_toggle',_parent).removeClass("open");
-					$('.row_toggle_container',_parent).slideUp();
-				//	$('.row_toggle_container',_parent).hide();
-					
-				}
-				
-				$(this).addClass("open");
-				$(this).next(".row_toggle_container").slideDown();
-			//	$(this).next(".row_toggle_container").show();
-			}
-		}
-	});
-	$(".row_toggle.open").each(function(){
-		$(this).next(".row_toggle_container").slideDown();
-	});
-
-}
-
 function initFancy()
 {
-
-	$(".fancybox-gallery").fancybox(
-	{
-		theme : 'light',
-		helpers : { thumbs : true },
-		openEffect  : 'fade',
-		closeEffect : 'fade',
-		nextEffect  : 'fade',
-		prevEffect  : 'fade',
-		'showNavArrows' :   true
-	});
-
-//	$(".popup").click( function()
 	$(document).on("click",".popup",function(){
 		var form_id = $(this).attr('href');
 
@@ -57,150 +9,27 @@ function initFancy()
 		var btn_text = $(this).data('btn');
 
 		$(".popup_container .form_title").html(title);
+		$(".popup_container input[name='subject']").val(subject);
+		$(".popup_container input[name='Форма']").val(form_name);			
+		$(".popup_container button span").text(btn_text);
 
-		$.fancybox.open( $(form_id).html(),
+		$.fancybox.open(
 		{
 			padding: 0,
-			content: $(form_id).html(),
+			src: form_id,
 		//	modal: true,
 			scrolling: "no",
 			margin: 5,
 			/*closeBtn: false,*/
 			afterShow: function()
-			{
-			
-			
-				$(".popup_container input[name='subject']").val(subject);
-				$(".popup_container input[name='Форма']").val(form_name);			
-				$(".popup_container button span").text(btn_text);			
-			
-				$("input[name=Телефон]").inputmask("+7(999) 999-99-99");			
-				
+			{			
+				$("input[name=Телефон]").inputmask("+7(999) 999-99-99");					
 			}
 		} );
 		return false;
 	});
 }//end_ func
 
-
-function initForm()
-{
-
-	$("input[name=Телефон]").inputmask("+7(999) 999-99-99");
-
-	$( "body" ).on( "submit", "form", function()
-	{
-		if ($(this).hasClass("not_agree")) return false;
-
-		var l_form_object = $(this);
-		$("input,textarea,select",this).closest(".form-group").removeClass("has-danger");
-		var l_err = false;
-		$(".nacc",this).each( function()
-		{
-			if ( $(this)[0].tagName=="SELECT" || $(this)[0].tagName=="INPUT" )
-			{
-				if ( $.trim($(this).val())=="" )
-				{
-					l_err = true;
-					$(this).closest(".form-group").addClass("has-danger");
-				}//end_ if
-			}//end_ if
-		} );
-
-		if ( l_err==true )
-		{
-			alert("В одном или нескольких полях введены неверные данные");
-			return false;
-		}//end_ if
-
-		
-		_form_title = $("input[name='title']",this).val();
-		_form_comment = $("input[name='comment']",this).val();
-		_form_name = $("input[name='form_name']",this).val();
-		_form_type_model_name = $("input[name='form_type_model_name']",this).val();
-		_form_diler = $("input[name='form_diler']",this).val();
-
-		var _form = this;
-
-
-		var l_hash = "8cfeaf5c6baa746972dc720c3ac80214";
-		var l_host = "http://suzuki-samara.ru/";
-		var l_phone = $(this).find("input[name=Телефон]").val();
-
-		if ( ("-="+l_phone).indexOf("_")>0 )
-		{
-			alert("Заполните поле Телефон");
-			return false;
-		}
-
-		if ( typeof(CallKeeper)!="undefined" )
-		{
-			var l_callkeeper_url = '//api.callkeeper.ru/formReceiver?isSend&widgetHash='+l_hash+'&phone='+l_phone+'&backUrl='+l_host+'&cookiesBasket='+CallKeeper.f.justCookies();
-			$.post( l_callkeeper_url, $(this).serialize()+"&form="+this.id+"&form_title="+_form_title, function( data )
-			{
-			});
-			console.log( "[callkeeper working]" );
-			console.log( l_callkeeper_url );
-		}else
-		{
-			//var cookiesBasket = '&cookiesBasket=current:::typ=utm|||src=actioncall|||mdm=cpc|||cmp=lpnoscript|||cnt=(none)|||trm=(none)^#^#.';
-			var cookiesBasket = '&cookiesBasket=' + encodeURIComponent('current:::typ=utm|||src=actioncall|||mdm=cpc|||cmp=lpnoscript|||cnt=(none)|||trm=(none)^#^#session:::cpg='+l_host+'^#^#');
-			var l_callkeeper_url = '//api.callkeeper.ru/formReceiver?isSend&widgetHash='+l_hash+'&phone='+l_phone+'&backUrl='+l_host+cookiesBasket;
-			$.post( l_callkeeper_url, $(this).serialize()+"&form="+this.id+"&form_title="+_form_title, function( data )
-			{
-			});
-			_form_title = _form_title + " [callkeeper default utm]";
-			console.log( "[callkeeper static utm]" );
-			console.log( l_callkeeper_url );
-		}//end_ if
-
-		if ( typeof(window.yaCounter52650682)!="undefined" ) {
-			if ( typeof(window.ym)!="undefined" ) {
-				ym(52650682,'reachGoal','lead');
-				console.log( "[ym ok]" );
-			} else {
-				yaCounter52650682.reachGoal('lead');
-				console.log( "[yaCounter ok]" );
-			}
-		}
-		
-		$.post( "mail.php", $(this).serialize(), function( data )
-		{
-		console.log(data);
-			
-			$(_form).trigger('reset');
-			$('input[name=files]',_form).val('');
-			$('.uploader_text',_form).css('display','inline-block');
-			$('.uploader_images_count',_form).hide();
-			alert("Сообщение успешно отправлено");
-			$.fancybox.close();
-		});
-
-		return false;
-	} );
-}//end_ func
-
-
-
-
-
-function init_topmenu()
-{
-	$('.btn_menu').click(function(){
-		if ($(this).hasClass('open'))
-		{
-			$(this).removeClass('open');
-		}
-		else
-		{
-			$(this).addClass('open');
-		}
-	});
-	$(document).mousedown(function(event){if ($(event.target).closest('.menu_container').length == 0 && !$(event.target).hasClass('btn_menu')) {$('.btn_menu').removeClass('open');}});
-
-
-
-}
 function anchor_click()
 {
 	$('.anchor[href^="#"]').click(function(){
@@ -230,41 +59,6 @@ function anchor_click()
 	});
 }
 
-function init_resp_table()
-{
-	var i = 1;
-	$('.resp_table').each(function(){
-		$(this).addClass('resp_table'+i);
-		var _add_style = "";
-		var j = 1;
-		$('th',this).each(function(){
-			var _text = $(this).html();
-			_text = _text.replace("<br>"," ");
-			_text = _text.replace("<br/>"," ");
-			_text = _text.replace("</br>"," ");
-			_text = _text.replace("/r","");
-			_text = _text.replace(/\r|\n/g, '')
-			_text = _text.replace(/<\/?[^>]+>/g,'');
-			_text = _text.replace(/\s{2,}/g, ' ');
-			if (_text != "") _add_style += ".resp_table"+i+ " tr td:nth-child("+j+"):before {content:'"+_text+"'}";
-			j++;
-		});
-		$(this).after("<style>"+_add_style+"</style>");
-		
-		i++;
-	});
-}
-function refresh_table()
-{
-	var curWidth = $(window).width();
-	if (curWidth < 700) {
-		$('.resp_table').each(function(){
-		});
-	}
-	else
-	{
-	}
-}
 function init_agree()
 {
 	$(document).on("change","input[name='agree']",function(){
@@ -300,21 +94,6 @@ function init_agree()
 		if ($(this).hasClass("not_agree")) return false;
 	});
 
-}
-
-function _init_tabs()
-{
-	$('.tabs_control > li a').click(function(){
-		$('.tabs_control > li a').removeClass("current");
-		$(this).addClass("current");
-		var _parent = $(this).closest(".tabs_control");
-		var _target = $(_parent).attr("data-target");
-		var _index = $(this).closest("li").index();
-		console.log("#"+_target+" > li:eq("+_index+")");
-		$("#"+_target+" > li").removeClass("current");
-		$("#"+_target+" > li:eq("+_index+")").addClass("current");
-		return false;
-	});
 }
 
 
@@ -357,22 +136,11 @@ function initHighLightText()
 	scrollFunction();
 }//end_ func
 
-
-
-
-
-
 $( function() {
 
 	init_agree();
 	anchor_click();
-	init_topmenu();
-	initFancy();
-	initForm();
-	init_resp_table();
-	init_row_toggle();
-	_init_tabs();
-	
+	initFancy();	
 	AOS.init({
 		// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
 		offset: 80, // offset (in px) from the original trigger point
@@ -384,6 +152,111 @@ $( function() {
 		anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 	});
 	initHighLightText();
+
+	$("input[name=Телефон]").inputmask("+7(999) 999-99-99");
+
+	//E-mail Ajax Send
+	$("form").submit(function() { //Change
+		var th = $(this);
+
+		var l_phone = th.find("input[name=Телефон]").val();
+
+		// Phone Validation
+		if ( ("-="+l_phone).indexOf("_")>0 ) {
+			swal({
+				title: "Номер телефона",
+				text: "Номер телефона введен некорректно. Заполните поле без 8 в виде: +7 (999) 999-99-99",
+				icon: "info",
+				buttons: {
+					cancel: "Хорошо",
+				},
+			});
+			return false;
+		}
+
+		var btnSubmit = th.find('button[type="submit"]');
+		btnSubmit.attr("disabled", true);
+		var url = window.location.href;
+		var replUrl = url.replace('?', '&');
+		$.ajax({
+			type: "POST",
+			url: "/mail.php", //Change
+			data: th.serialize() +'&referer=' + replUrl
+		}).done(function( data ) {
+			// console.log( "success data:", data );
+			if(data != "")
+				setTimeout(function() {
+					$.fancybox.close();
+					try {
+						res = JSON.parse(data);
+					} catch(e) {
+						res = "";
+					}
+					if(res.answer == 'ok'){
+						th.trigger("reset");
+						swal({
+							title: "Спасибо!",
+							text: "Ваше сообщение успешно отправлено.\nВ скором времени мы с Вами свяжемся.",
+							icon: "success",
+							button: "Хорошо",
+						// timer: 3000
+					});
+					}else{
+						swal({
+							title: "Ошибка :(",
+							text: "Что-то пошло не так. Перезагрузите страницу и попробуйте снова. Или позвоните нам.",
+							icon: "error",
+							buttons: {
+								cancel: "Хорошо",
+								catch: {
+									text: "Позвонить",
+									value: "call",
+								},
+							},
+						})
+						.then((value) => {
+							switch (value) {
+
+								case "call":
+								location.href = "tel:+78469777779";
+								break;
+
+								default:
+							}
+						});
+					}
+					btnSubmit.removeAttr("disabled");
+				}, 100);
+		}).fail(function() {
+			setTimeout(function() {
+				$.fancybox.close();
+				swal({
+					title: "Ошибка :(",
+					text: "Что-то пошло не так. Перезагрузите страницу и попробуйте снова. Или позвоните нам.",
+					icon: "error",
+					buttons: {
+						cancel: "Хорошо",
+						catch: {
+							text: "Позвонить",
+							value: "call",
+						},
+					},
+				})
+				.then((value) => {
+					switch (value) {
+
+						case "call":
+						location.href = "tel:+78469777779";
+						break;
+
+						default:
+					}
+				});
+				btnSubmit.removeAttr("disabled");
+			}, 100);
+		});
+		return false;
+	});
 
 	$('.disclamer_switch').click(function () {
 		$('.disclamer').slideToggle({
