@@ -23,6 +23,14 @@ function initFancy()
 			/*closeBtn: false,*/
 			afterShow: function()
 			{			
+				if(title.search('кредит') != -1) {
+					if(typeof ym != 'undefined') ym('56253319', 'reachGoal', 'form_credit');
+					if(typeof ym != 'undefined') ym('56253355', 'reachGoal', 'form_credit');
+				} else {
+					if(typeof ym != 'undefined') ym('56253319', 'reachGoal', 'form_popup');
+					if(typeof ym != 'undefined') ym('56253355', 'reachGoal', 'form_popup');
+				}
+
 				$("input[name=Телефон]").inputmask("+7(999) 999-99-99");					
 			}
 		} );
@@ -183,6 +191,10 @@ $( function() {
 			url: "/mail.php", //Change
 			data: th.serialize() +'&referer=' + replUrl
 		}).done(function( data ) {
+
+			if(typeof ym != 'undefined') ym('56253319', 'reachGoal', 'form_submit');
+			if(typeof ym != 'undefined') ym('56253355', 'reachGoal', 'form_submit');
+
 			// console.log( "success data:", data );
 			if(data != "")
 				setTimeout(function() {
@@ -320,3 +332,9 @@ $( function() {
 
 });
 
+document.querySelectorAll('[href^="tel:"]').forEach( function(element) {
+	element.addEventListener('click', function() {
+		if(typeof ym != 'undefined') ym('56253319', 'reachGoal', 'phone_click');
+		if(typeof ym != 'undefined') ym('56253355', 'reachGoal', 'phone_click');
+	});
+});
