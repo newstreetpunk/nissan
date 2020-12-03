@@ -158,7 +158,7 @@ function promo_nissan_watch() {
 	watch(projects.promo_nissan.code.src).on('change', browserSync.reload);
 };
 
-exports.promo_nissan_cleanimg = promo_nissan_cleanimg;
-exports.promo_nissan = parallel(promo_nissan_images, promo_nissan_styles, promo_nissan_scripts, promo_nissan_browsersync, promo_nissan_watch);
+exports.nissan_promo_cleanimg = promo_nissan_cleanimg;
+exports.nissan_promo = parallel(promo_nissan_images, promo_nissan_styles, promo_nissan_scripts, promo_nissan_browsersync, promo_nissan_watch);
 
 /* promo_nissan END */

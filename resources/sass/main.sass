@@ -1209,15 +1209,21 @@ header .btn
       flex-direction: column
       position: relative
 
-    .btn.rassrochka
+
+    .btn.avn
+      margin-top: 10px
+
+    .btn.rassrochka, .btn.avn
       font-size: 16px
       text-transform: none
       text-align: center
       padding-left: 0
       background: $red
-      margin-top: 50px
       max-width: 230px
       line-height: 1.2
+
+    .btn.rassrochka
+      margin-top: 40px
       span
          width: auto
       &:before
@@ -2141,7 +2147,7 @@ footer .disclamer
   #form1
     width: 50%
     margin: 30px auto 0
-  .cars_items > li .btn.rassrochka
+  .cars_items > li .btn.rassrochka, .cars_items > li .btn.avn
     position: relative
     bottom: unset
   header .container
@@ -2354,7 +2360,7 @@ footer .disclamer
       .cred
         font-size: 20px
 
-    .btn.rassrochka
+    .btn.rassrochka, .btn.avn
       position: relative
       bottom: 0
       margin-bottom: 5px
@@ -3057,8 +3063,8 @@ footer .disclamer
       padding-bottom: 0
    .cars_items>li .btns
       padding-bottom: 0
-   .cars_items>li .btn.rassrochka
-      margin: 0 auto
+   .cars_items>li .btn.rassrochka, .cars_items>li .btn.avn
+      margin: 10px auto 0
       max-width: 320px
       width: 100%
    .props_price
@@ -3087,7 +3093,7 @@ footer .disclamer
 @media (max-width: 576px)
    .cars_items>li .car_title
       text-align: left
-   .cars_items>li .btn.rassrochka
+   .cars_items>li .btn.rassrochka, .cars_items>li .btn.avn
       margin-right: auto
       margin-left: 0
    .cars_items>li .btns .btn
